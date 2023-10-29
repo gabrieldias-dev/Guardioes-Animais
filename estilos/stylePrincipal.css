@@ -12,14 +12,32 @@
     box-sizing: border-box;
 }
 
-/* Class para tamanho de mobile e alinhando conteudo ao meio */
+ul {
+    list-style: none;
+}
 
-.wrapper {
-    width: 37.5rem;
+
+
+.wrapper { /* Class para tamanho de mobile e alinhando conteudo ao meio */
+    width: 36.5rem;
     margin-inline: auto;
     padding-inline: 2.4rem;
-   
+}
 
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.6rem;
+
+    overflow: overlay;
 }
 
 .sectionPrincipal {
@@ -53,11 +71,97 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 36.5rem;
 
 }
 
 .scroll {
     width: 100vw;
     background-color: brown;
+}
+.scroll .logo {
+    color: white;
+}
+
+nav button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Menu expansivel para dispositivos menores */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu, .close-menu, body.menu-expanded .open-menu  {
+    display: none;
+}
+
+body.menu-expanded {
+    overflow: hidden;
+}
+
+body.menu-expanded .menu, 
+body.menu-expanded .close-menu {
+    display: block;
+}
+
+body.menu-expanded .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: brown;
+    padding-top: var(--alturaNav);
+
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+
+    margin-top: 4rem;
+}
+
+.menu .social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.menu .bnt-voluntario {
+    display: inline-block;
+    background-color: aquamarine;
+    margin: 4rem 0;
+    padding: 1rem 2.5rem;
+    border-radius: 4rem;
+
+    text-transform: uppercase;
+    
+
+}
+
+body.menu-expanded .logo,
+body.menu-expanded nav button {
+    z-index: 100;
+    color: white;
+}
+
+
+/* Main */
+
+.sectionPrincipais {
+    padding-top: calc(3rem + var(--alturaNav));
 }
