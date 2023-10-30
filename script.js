@@ -2,8 +2,7 @@
 
 function onScroll() {
   showNavOnScroll();
-  
-
+  ativarMenuDaSection();
 }
 
 function showNavOnScroll(){
@@ -25,3 +24,7 @@ function closeMenu() {
   document.body.classList.remove("menu-expanded");
 }
 
+function ativarMenuDaSection(){
+  const linhaAlvo = scrollY  + innerHeight / 2
+
+}
