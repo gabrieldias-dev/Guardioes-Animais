@@ -16,10 +16,15 @@ ul {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 
 
 .wrapper { /* Class para tamanho de mobile e alinhando conteudo ao meio */
-    width: 36.5rem;
+    width: min(50rem, 100%);
     margin-inline: auto;
     padding-inline: 2.4rem;
 }
@@ -38,6 +43,7 @@ body {
     font-size: 1.6rem;
 
     overflow: overlay;
+    transition: all 300ms;
 }
 
 .sectionPrincipal {
@@ -92,12 +98,6 @@ nav button {
 
 /* Menu expansivel para dispositivos menores */
 
-.menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 
 .menu, .close-menu, body.menu-expanded .open-menu  {
     display: none;
@@ -110,19 +110,24 @@ body.menu-expanded {
 body.menu-expanded .menu, 
 body.menu-expanded .close-menu {
     display: block;
+    transition: all 1s;
+}
+
+.menu {
+ transform: translateY(100%);
 }
 
 body.menu-expanded .menu {
     position: fixed;
     top: 0;
     left: 0;
-
     width: 100vw;
     height: 100vh;
-
     background-color: brown;
     padding-top: var(--alturaNav);
 
+    transition: all 1s;
+    transform: translateY(0);
 }
 
 .menu ul {
@@ -141,17 +146,6 @@ body.menu-expanded .menu {
     gap: 3rem;
 }
 
-.menu .bnt-voluntario {
-    display: inline-block;
-    background-color: aquamarine;
-    margin: 4rem 0;
-    padding: 1rem 2.5rem;
-    border-radius: 4rem;
-
-    text-transform: uppercase;
-    
-
-}
 
 body.menu-expanded .logo,
 body.menu-expanded nav button {
@@ -164,4 +158,58 @@ body.menu-expanded nav button {
 
 .sectionPrincipais {
     padding-top: calc(3rem + var(--alturaNav));
+}
+
+
+@media (min-width: 1024px) {
+
+    .wrapper {
+     width: min(112rem, 100%);
+    }
+
+    nav#navigation .wrapper * {
+        margin: 0;
+        padding: 0;
+        display: initial;
+        position: initial;
+        opacity: initial;
+        flex-direction: initial;
+        transform: initial;
+    }
+
+    nav#navigation .close-menu, 
+    nav#navigation .open-menu,
+    nav#navigation .social-links {
+    display: none;
+    }
+
+    nav#navigation .menu ul:nth-child(1) {
+        display: flex;
+        gap: 3.6rem;
+    }
+
+    /* nav#navigation .menu li a {
+        color: rgb(2, 51, 2);
+        opacity: 50%;
+    } */
+
+    /* nav#navigation .menu li a:hover {
+        opacity: 100%
+    } */
+
+    nav#navigation .menu li a::after {
+            content: '';
+            width: 0%;
+            height: 2px;
+            background-color: rgb(0, 0, 0);
+
+            display: block;
+            transition: width 0.5s;
+         
+        }
+
+    nav#navigation .menu li a:hover:after {
+        width: 100%;
+    }
+
 }
