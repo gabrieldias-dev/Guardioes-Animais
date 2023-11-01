@@ -1,0 +1,698 @@
+@charset "UTF-8";
+
+/*=== GERAL =================================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    /text-decoration: none; 
+}
+
+:root {
+    font-size: 62.5%;
+    --nav-height: 7.2rem;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-size: 1.6rem;
+    text-align: center;
+    overflow: overlay; /*fazendo a barra de rolagem ficar sobreposta na pagina*/
+    background-color: rgb(162, 215, 162);
+    scrollbar-color: #00856e;
+}
+
+.wrapper {
+    width: min( 50rem, 100%); /* quando a largura for menor que 50rem(500px) pega 100% */
+    margin: auto;
+    padding: 2.4rem;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%; 
+}
+
+section {
+    padding-block: 10rem;
+}
+
+section header h1 {
+    font-size: 3.4rem;
+    color: var(--headline);
+    line-height: 130%;
+    margin-bottom: 2.4rem;
+}
+
+section .content p {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 150%;
+
+    color: var(--paragraph);
+}
+
+.button {
+    background: var(--primary-color);
+    border: none;
+    border-radius: 4rem;
+    margin-bottom: 6rem;
+    padding: 1.6rem 3.2rem;
+    width: fit-content; /* a largura dele ficara adaptada ao conteudo */
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+}
+
+.button:hover {
+    background-color: var(--brand-dark-hover);
+    transition: background 200ms;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+}
+
+/*=== CUSTOM COLORS =================================*/
+#services .card circle {
+    fill: var(--brand-light);
+}
+
+#navigation .logo path[fill*="00856F"], /* coloque o fill apenas onde tiver o Fill= 00856F SELETOR CONDICIONAL*/
+#backToTopButton circle {
+    fill: var(--primary-color);
+}
+
+button.open-menu path[stroke*="#00856F"],
+#contact li path {
+    stroke: var(--primary-color);
+}
+
+body.menu-expanded #navigation .logo path,
+#navigation.scroll .logo path {
+    fill: white;
+}
+
+#navigation.scroll button.open-menu path[stroke*="00856F"] {
+    stroke: white;
+}
+
+/*=== NAVIGATION =================================*/
+nav {
+    display: flex;
+    height: var(--nav-height);
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 100;
+}
+
+nav .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav.scroll {
+    background: var(--primary-color);
+}
+
+nav button {
+    background: none; /*removendo o fundo do botao*/
+    border: none; /*removendo a borda do botao*/
+    cursor: pointer; /*adicionando a maozinha de clicar*/
+}
+
+nav .menu,
+nav .close-menu {
+    position: fixed;
+}
+
+/*=== MENU-EXPANDED =================================*/
+body.menu-expanded {
+    overflow: hidden; /* overflow faz com que o remova as barra de rolagem */
+}
+
+/* removendo todos os filhos do primeiro nivel do body menos o <nav> */
+body.menu-expanded > :not(nav) {
+    visibility: hidden;
+}
+
+.menu,
+.close-menu,
+body.menu-expanded .open-menu {
+    opacity: 0;
+    visibility: hidden;
+}
+
+body.menu-expanded .menu,
+body.menu-expanded .close-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu {
+    transform: translateY(100%);
+}
+
+body.menu-expanded .menu {
+    top: 0;
+    left: 0;
+    background: var(--primary-color);
+    width: 100vw;
+    height: 100vh;
+    padding-top: var(--nav-height);
+    transition: transform 300ms;
+    transform: translateY(0);
+}
+
+.menu ul:nth-child(1) {
+    /*aplicando apenas para o primeiro <ul> que encontrar */
+    display: flex;
+    flex-direction: column; /*deixando um embaixo do outro*/
+    gap: 4.8rem;
+    margin-top: 6rem;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.1rem;
+}
+
+.menu ul li a {
+    /*aplicando direto no elemento <a> */
+    color: white;
+    text-decoration: none;
+}
+
+.menu .button {
+    background: white;
+    border-radius: 4rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--primary-color);
+    display: inline-block; /* permite aplicar altura e largura e mantendo na mesma linha */
+    padding: 16px 32px;
+    margin-top: 4.8rem;
+    margin-bottom: 8rem;
+}
+
+.menu .button:hover {
+    background-color: var(--primary-color);
+    color: white;
+    filter: brightness(1.7);
+}
+
+body.menu-expanded .logo,
+body.menu-expanded button {
+    position: relative; /*desbloqueia o z-index*/
+    z-index: 100;
+}
+
+body.menu-expanded .logo path {
+    /*quando a classe no body menu-expanded estiver ativo o logo recebe o fill white*/
+    fill: white;
+}
+
+body.menu-expanded button path {
+    stroke: white;
+}
+
+/*==== #HOME =========================================================*/
+#home {
+    padding-block: 0;
+    padding-top: calc(4.1rem + var(--nav-height));
+}
+
+/* criando a cor de fundo do home*/
+#home::before {
+    content: "";
+    width: 100%;
+    height: calc(76% + var(--nav-height));
+    background-color: var(--brand-light);
+    display: block;
+    position: absolute; /* faz com que o elemento fique acima de qualquer outro */
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#home p {
+    font-size: 1.8rem;
+    line-height: 150%;
+    font-weight: 400;
+    color: var(--paragraph);
+    margin-bottom: 3.2rem;
+}
+
+#home .button {
+    margin-inline: auto;
+}
+
+#home img {
+    width: 26.4rem;
+    display: block;
+    margin-inline: auto;
+    object-position: 0 2rem; /*mexe no posicionamento da imagem(so funciona em imagens)*/
+}
+
+#home .stats {
+    width: 100%;
+    padding-block: 4rem; /* coloca padding no superior e no inferior*/
+    margin-inline: auto; /* coloca margin na esquerda e na direita*/
+    background-color: var(--brand-beige);
+    border: 1px solid var(--brand-light);
+    border-radius: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6rem;
+}
+
+#home .stat h3 {
+    font-size: 4.8rem;
+    color: var(--headline);
+    line-height: 130%;
+    margin-bottom: 0.4rem;
+}
+
+#home .stat p {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    line-height: 150%;
+}
+
+/*=== SERVICES =================================*/
+#services header h2 {
+    margin-bottom: 6rem;
+}
+
+#services .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+
+#services .card {
+    padding: 2.4rem;
+    text-align: left;
+    background: white;
+    border: 1px solid var(--brand-light);
+    border-radius: 0.6rem;
+}
+
+#services .card h3 {
+    margin-block: 1.6rem;
+}
+
+/*=== ABOUT =================================*/
+#about {
+    text-align: left;
+    background-color: var(--brand-beige);
+}
+
+#about header h2 {
+    margin-bottom: 2.4rem;
+}
+
+#about .content p {
+    margin-top: 2.4rem;
+    margin-bottom: 6rem;
+}
+
+/*=== CONTACT =================================*/
+#contact {
+    text-align: left;
+}
+
+#contact header {
+    margin-bottom: 3.2rem;
+}
+
+#contact ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-bottom: 3.2rem;
+}
+
+#contact ul li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+/*=== FOOTER =================================*/
+footer {
+    background-color: var(--primary-color);
+    padding-block: 6rem;
+    text-align: left;
+    color: white;
+}
+
+footer .logo {
+    display: inline-block;
+    margin-bottom: 2.4rem;
+}
+
+footer logo svg {
+    width: 23.6rem;
+    height: 3.1rem;
+}
+
+footer .logo path {
+    fill: white;
+}
+
+footer p {
+    color: var(--brand-beige);
+    line-height: 2;
+    margin-bottom: 3.2rem;
+}
+
+footer .social-links {
+    justify-content: flex-start;
+}
+
+/*=== BUTTON TO TOP =================================*/
+#backToTopButton {
+    position: fixed;
+    bottom: 1rem;
+    right: 2.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100%);
+    transition: 200ms;
+}
+
+#backToTopButton.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/*=== RESPONSIVIDADE  DESKTOP=================================*/
+
+/* quando o dispositivo tiver minimo 1024px pra cima  */
+@media (min-width: 1024px) {
+    ::-webkit-scrollbar {
+        /* display: block; */
+        width: 1.4rem;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: var(--bg-light);
+        border: 1px solid #cfd8dc;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--primary-color);
+        border: 3px solid #cfd8dc;
+        border-radius: 10px;
+    }
+    /*=== GERAL =================================*/
+    body {
+        overflow: auto;
+    }
+
+    .wrapper {
+        width: min(112rem, 100%);
+        display: grid;
+    }
+
+    #home .col-a {
+        grid-area: A;
+    }
+
+    #home .col-b {
+        grid-area: B;
+    }
+
+    section {
+        padding-block: 16rem;
+    }
+
+    section header h2 {
+        font-size: 4rem;
+        line-height: 5.2rem;
+    }
+
+    /*=== NAVIGATION =================================*/
+    /* reset */
+    nav#navigation .wrapper * {
+        margin: 0;
+        padding: 0;
+        color: initial;
+        filter: initial;
+        display: initial;
+        opacity: initial;
+        position: initial;
+        transform: initial;
+        font-size: initial;
+        visibility: initial;
+        font-weight: initial;
+        flex-direction: initial;
+        background-color: initial;
+    }
+
+    nav#navigation .close-menu,
+    nav#navigation .open-menu,
+    nav#navigation .social-links {
+        display: none;
+    }
+
+    nav#navigation .menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 60%;
+    }
+
+    nav#navigation .menu ul:nth-child(1) {
+        display: flex;
+        gap: 3.2rem;
+    }
+
+    nav#navigation .menu ul li a {
+        color: var(--primary-color);
+        opacity: 0.8;
+    }
+
+    nav#navigation .menu a.button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 2.4rem;
+        border: 1px solid var(--primary-color);
+        border-radius: 4rem;
+        color: var(--primary-color);
+        font-weight: 700;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        text-transform: uppercase;
+    }
+
+    nav#navigation .menu a.button:hover {
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+    }
+
+    nav#navigation.scroll .menu ul li a {
+        color: white;
+    }
+
+    nav#navigation.scroll .menu a.button {
+        border-color: white;
+        color: white;
+    }
+
+    nav#navigation .menu li a {
+        transition: opacity 0.4s;
+    }
+
+    nav#navigation .menu li a.active,
+    nav#navigation .menu li a:hover {
+        opacity: 1;
+        font-weight: 700;
+    }
+
+    /* Criando a linha de animação nos links da navbar*/
+    nav#navigation .menu li a::after {
+        content: "";
+        width: 0;
+        height: 2px;
+        background-color: var(--primary-color);
+        display: block;
+        position: relative;
+        bottom: -2rem;
+        left: -0.5rem;
+        transition: width 0.2s;
+    }
+
+    nav#navigation.scroll .menu li a::after {
+        background-color: white;
+    }
+
+    nav#navigation .menu li a.active::after,
+    nav#navigation .menu li a:hover::after {
+        padding-inline: 0.8rem;
+        width: 100%;
+    }
+
+    nav#navigation.scroll .menu li a.active,
+    nav#navigation.scroll .menu li a:hover {
+        opacity: 1;
+    }
+
+    nav#navigation.scroll .menu a.button.active,
+    nav#navigation.scroll .menu a.button:hover {
+        background-color: var(--primary-color);
+        filter: brightness(1.3);
+        border: none;
+    }
+
+    /*=== HOME =================================*/
+    #home::before {
+        height: calc(96% - var(--nav-height));
+    }
+
+    #home {
+        padding-top: var(--nav-height);
+    }
+
+    #home .wrapper {
+        grid-template-columns: 60.5rem 1fr;
+        grid-template-areas: "A B" "C C";
+    }
+
+    #home .col-a {
+        text-align: left;
+        align-self: center;
+    }
+
+    #home h1 {
+        font-size: 5.2rem;
+    }
+
+    #home .content p {
+        font-size: 1.8rem;
+    }
+
+    #home .stats {
+        grid-area: C;
+        flex-direction: row;
+        padding: 6rem;
+        gap: 0;
+    }
+
+    #home .stats .stat + .stat {
+        /* .stat + .stat significa que so ira aplicar nos elementos que tiverem um elemento stat anterior a ele*/
+        border-left: 1px solid var(--primary-color);
+    }
+
+    #home .stats .stat {
+        flex: 1; /* flex 1 faz com que todas as caixas tenham a mesma largura*/
+    }
+
+    #home .button {
+        margin: 0;
+    }
+
+    #home img {
+        width: 42rem;
+    }
+
+    /*=== SERVICES =================================*/
+    #services h2 {
+        width: 48rem;
+        margin-inline: auto;
+    }
+
+    #services .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 4rem;
+    }
+
+    #services .card {
+        width: 30%;
+        flex-grow: 1;
+    }
+
+    /*=== ABOUT =================================*/
+    #about .wrapper {
+        grid-template-columns: 48rem 1fr;
+        grid-template-areas: "B A";
+        gap: 6.7rem;
+    }
+
+    #about .col-a {
+        align-self: center;
+    }
+
+    #about .content p {
+        margin-bottom: 0;
+    }
+
+    /*=== CONTACT =================================*/
+    #contact .wrapper {
+        grid-template-columns: 1fr 57.5rem;
+        grid-template-areas: "A B";
+    }
+
+    #contact h2 {
+        width: 40.4rem;
+    }
+
+    /*=== FOOTER =================================*/
+    footer {
+        padding-block: 6.5rem;
+    }
+
+    footer .wrapper {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "A B";
+    }
+
+    footer p {
+        margin-bottom: 0;
+    }
+
+    footer .col-a {
+        align-self: center;
+    }
+
+    footer .col-b {
+        align-self: center;
+        justify-self: flex-end;
+    }
+}
