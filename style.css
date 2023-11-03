@@ -1,0 +1,283 @@
+/*=== GERAL =================================*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: DM Sans;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --hue: 170;
+  font-size: 62.5%;
+  --nav-height: 7.2rem;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-size: 1.6rem;
+  text-align: center;
+  overflow: overlay; /*fazendo a barra de rolagem ficar sobreposta na pagina*/
+  background-color: rgb(126, 225, 126);
+  scrollbar-color: #00856e;
+}
+
+.wrapper {
+  width: min( 50rem, 100%); /* quando a largura for menor que 50rem(500px) pega 100% */
+  margin: auto;
+  padding: 2.4rem;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+section {
+  padding: 5rem;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+}
+
+/*=== CUSTOM COLORS =================================*/
+
+/*=== Navegação =================================*/
+nav {
+  display: flex;
+  height: var(--nav-height);
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;
+}
+
+nav .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav.scroll {
+  background-color: #00856e;
+}
+
+nav button {
+  background: none; 
+  border: none; 
+  cursor: pointer; 
+}
+
+nav .menu, nav .close-menu {
+  position: fixed;
+}
+
+/*=== MENU-Expandido - Telas menores =================================*/
+body.menu-expanded {
+  overflow: hidden; 
+}
+
+.menu, .close-menu, body.menu-expanded .open-menu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.menu-expanded .menu,
+body.menu-expanded .close-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu {
+  transform: translateX(100%);
+}
+
+body.menu-expanded .menu {
+  top: 0;
+  left: 0;
+  background-color: #00856e;
+  width: 100vw;
+  height: 100vh;
+  padding-top: var(--nav-height);
+  transition: transform 0.5s;
+  transform: translateX(0);
+}
+
+.menu .menu-expandido{
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+  margin-top: 6rem;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+}
+
+
+body.menu-expanded .logo,
+body.menu-expanded button {
+  position: relative; /*desbloqueia o z-index*/
+  z-index: 100;
+}
+
+
+/*==== #HOME =========================================================*/
+#home {
+  padding-top: calc(4.1rem + var(--nav-height));
+}
+
+
+/*=== SERVICES =================================*/
+
+/*=== ABOUT =================================*/
+
+/*=== CONTACT =================================*/
+
+
+/*=== FOOTER =================================*/
+footer {
+  background-color: #00856e;
+  padding-block: 6rem;
+  text-align: left;
+  color: white;
+}
+
+
+/*=== RESPONSIVIDADE  DESKTOP=================================*/
+
+/* quando o dispositivo tiver minimo 1024px pra cima  */
+@media (min-width: 1024px) {
+  ::-webkit-scrollbar {
+    width: 1.3rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--bg-light);
+    border: 0.5px solid #cfd8dc;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border: 3px solid #cfd8dc;
+    border-radius: 10px;
+  }
+  /*=== GERAL =================================*/
+  body {
+    overflow: auto;
+  }
+
+  .wrapper {
+    width: min(112rem, 100%);
+  }
+
+  section {
+    padding: 6rem;
+  }
+
+  /*=== Navegação =================================*/
+  
+  nav#navigation .wrapper * {
+    margin: 0;
+    padding: 0;
+    color: initial;
+    filter: initial;
+    display: initial;
+    opacity: initial;
+    position: initial;
+    transform: initial;
+    font-size: initial;
+    visibility: initial;
+    font-weight: initial;
+    flex-direction: initial;
+    background-color: initial;
+  }
+
+  nav#navigation .close-menu, nav#navigation .open-menu, nav#navigation .social-links {
+    display: none;
+  }
+
+  nav#navigation .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+  }
+
+  nav#navigation .menu .menu-expandido {
+    display: flex;
+    gap: 3.2rem;
+  }
+
+  /* Criando a linha de animação nos links da navbar*/
+  nav#navigation .menu li a::after {
+    content: "";
+    width: 0;
+    height: 1.3px;
+    background-color: var(--primary-color);
+    display: block;
+    position: relative;
+    bottom: -1rem;
+    left: -0.5rem;
+    transition: width 0.4s;
+  }
+
+  nav#navigation.scroll .menu li a::after {
+    background-color: white;
+  }
+
+  nav#navigation .menu li a.active::after,
+  nav#navigation .menu li a:hover::after {
+    padding-inline: 0.8rem;
+    width: 100%;
+  }
+
+
+  /*=== HOME =================================*/
+  
+  #home {
+    padding-top: var(--nav-height);
+  }
+
+  
+
+
+  /*=== SERVICES =================================*/
+  
+  /*=== ABOUT =================================*/
+  #about .wrapper {
+    grid-template-columns: 48rem 1fr;
+    grid-template-areas: "B A";
+    gap: 6.7rem;
+  }
+
+  /*=== CONTACT =================================*/
+ 
+
+  /*=== FOOTER =================================*/
+  footer {
+    padding: 6.5rem;
+  }
+
+}
