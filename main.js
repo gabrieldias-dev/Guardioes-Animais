@@ -6,9 +6,9 @@ onScroll()
 function onScroll() {
     showNavOnScroll()
     menuAtivado(home);
-    menuAtivado(services);
-    menuAtivado(about);
-    menuAtivado(contact);
+    menuAtivado(sobre);
+    menuAtivado(resgates);
+    menuAtivado(ajudar);
 }
 
 function showNavOnScroll() {
@@ -54,10 +54,10 @@ function menuAtivado(section) {
 
     let menuElement = document.querySelector(`.menu a[href*= ${sectionId}]`)
 
-    menuElement.classList.remove('active')
+    menuElement.classList.remove('ativo')
 
     if (limitesDaSecao) {
-        menuElement.classList.add('active')
+        menuElement.classList.add('ativo')
     }
 }
 

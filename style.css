@@ -1,17 +1,26 @@
-/*=== GERAL =================================*/
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100;300&family=Lugrasimo&family=Stick+No+Bills:wght@200;300&display=swap');
+
 * {
   margin: 0;
   padding: 0;
-  font-family: DM Sans;
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
 }
 
 :root {
-  --hue: 170;
   font-size: 62.5%;
   --nav-height: 7.2rem;
+
+  --var-CorPrimario: #451705;
+  --var-CorSecundario: #913916;
+  --var-CordeMedia: #DE6737;
+  --var-verde1: #004539;
+  --var-verde2: #16917D;
+
 }
 
 ::-webkit-scrollbar {
@@ -21,6 +30,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-family: 'Montserrat', sans-serif;
 }
 
 html,
@@ -37,8 +47,8 @@ body {
   scrollbar-color: #00856e;
 }
 
-.wrapper {
-  width: min( 50rem, 100%); /* quando a largura for menor que 50rem(500px) pega 100% */
+.alinhamento {
+  width: min(50rem, 100%); /* quando a largura for menor que 50rem(500px) pega 100% */
   margin: auto;
   padding: 2.4rem;
 }
@@ -47,19 +57,13 @@ ul {
   list-style: none;
 }
 
+
 img {
   max-width: 100%;
 }
 
 section {
   padding: 5rem;
-}
-
-.social-links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3.2rem;
 }
 
 /*=== CUSTOM COLORS =================================*/
@@ -71,35 +75,38 @@ nav {
   position: fixed;
   top: 0;
   width: 100vw;
-  z-index: 100;
+  z-index: 10;
 }
 
-nav .wrapper {
+nav .alinhamento {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 nav.scroll {
-  background-color: #00856e;
+  background-color: var(--var-CorPrimario);
 }
 
 nav button {
-  background: none; 
-  border: none; 
-  cursor: pointer; 
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-nav .menu, nav .close-menu {
+nav .menu,
+nav .close-menu {
   position: fixed;
 }
 
 /*=== MENU-Expandido - Telas menores =================================*/
 body.menu-expanded {
-  overflow: hidden; 
+  overflow: hidden;
 }
 
-.menu, .close-menu, body.menu-expanded .open-menu {
+.menu,
+.close-menu,
+body.menu-expanded .open-menu {
   opacity: 0;
   visibility: hidden;
 }
@@ -125,7 +132,7 @@ body.menu-expanded .menu {
   transform: translateX(0);
 }
 
-.menu .menu-expandido{
+.menu .menu-expandido {
   display: flex;
   flex-direction: column;
   gap: 4.8rem;
@@ -135,19 +142,16 @@ body.menu-expanded .menu {
   line-height: 3.1rem;
 }
 
-
 body.menu-expanded .logo,
 body.menu-expanded button {
   position: relative; /*desbloqueia o z-index*/
-  z-index: 100;
+  z-index: 10;
 }
-
 
 /*==== #HOME =========================================================*/
 #home {
   padding-top: calc(4.1rem + var(--nav-height));
 }
-
 
 /*=== SERVICES =================================*/
 
@@ -155,21 +159,19 @@ body.menu-expanded button {
 
 /*=== CONTACT =================================*/
 
-
 /*=== FOOTER =================================*/
 footer {
-  background-color: #00856e;
+  background-color: var(--var-CorPrimario);
   padding-block: 6rem;
   text-align: left;
   color: white;
 }
 
-
-/*=== RESPONSIVIDADE  DESKTOP=================================*/
+/*------- TELAS MAIORES QUE 1024PX (DESKTOP ETC..) -----------------*/
 
 /* quando o dispositivo tiver minimo 1024px pra cima  */
 @media (min-width: 1024px) {
-  ::-webkit-scrollbar {
+  /* ::-webkit-scrollbar {
     width: 1.3rem;
   }
 
@@ -182,14 +184,14 @@ footer {
     background: var(--primary-color);
     border: 3px solid #cfd8dc;
     border-radius: 10px;
-  }
+  } */
   /*=== GERAL =================================*/
   body {
     overflow: auto;
   }
 
-  .wrapper {
-    width: min(112rem, 100%);
+  .alinhamento {
+    width: min(120rem, 100%);
   }
 
   section {
@@ -197,11 +199,11 @@ footer {
   }
 
   /*=== Navegação =================================*/
-  
-  nav#navigation .wrapper * {
+
+  nav#navigation .alinhamento * {
     margin: 0;
     padding: 0;
-    color: initial;
+    color: white;
     filter: initial;
     display: initial;
     opacity: initial;
@@ -214,15 +216,31 @@ footer {
     background-color: initial;
   }
 
-  nav#navigation .close-menu, nav#navigation .open-menu, nav#navigation .social-links {
+  #navigation .alinhamento ul li a {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  #navigation .alinhamento .logo {
+    color: #ffffff;
+    font-size: 2rem;
+  }
+
+  
+
+  nav#navigation .close-menu,
+  nav#navigation .open-menu,
+  nav#navigation .social-links {
     display: none;
   }
 
   nav#navigation .menu {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: end;
     width: 60%;
+
   }
 
   nav#navigation .menu .menu-expandido {
@@ -247,37 +265,76 @@ footer {
     background-color: white;
   }
 
-  nav#navigation .menu li a.active::after,
+  nav#navigation .menu li a.ativo::after,
   nav#navigation .menu li a:hover::after {
     padding-inline: 0.8rem;
     width: 100%;
   }
 
+  /* ------------- Seção HOME -------------------*/
 
-  /*=== HOME =================================*/
-  
   #home {
     padding-top: var(--nav-height);
   }
 
-  
+  .sectionHome {
+    height: 100%;
+    background-image: url(assets/bg1.jpg);
+    background-position: center;
+    background-size: cover; 
+    background-attachment: fixed;
 
-
-  /*=== SERVICES =================================*/
-  
-  /*=== ABOUT =================================*/
-  #about .wrapper {
-    grid-template-columns: 48rem 1fr;
-    grid-template-areas: "B A";
-    gap: 6.7rem;
+    display: flex;
   }
 
+  .containerHome {
+    color: rgb(224, 224, 224);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30rem;
+
+    background-color: rgba(0, 16, 0, 0.558);
+    backdrop-filter: blur(2px);
+    border-radius: 1rem;
+    
+    
+  }
+
+
+  .containerHome h1 {
+    color: rgb(224, 224, 224);
+    font-size: 10rem;
+    font-weight: 600;
+    font-family: 'Stick No Bills', sans-serif;
+    padding: 2rem 0;
+  }
+
+  .containerHome p {
+    font-size: 3rem;
+    padding: 2rem 0;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+
+
+
+
+
+  /*--------------------- Sobre nos ------------------------*/
+
+  .sectionSobre {
+    background-color: var(--var-CorSecundario);
+  }
+  
+
   /*=== CONTACT =================================*/
- 
 
   /*=== FOOTER =================================*/
   footer {
     padding: 6.5rem;
   }
-
 }
