@@ -17,7 +17,7 @@
 
   --var-CorPrimario: #451705;
   --var-CorSecundario: #913916;
-  --var-CordeMedia: #DE6737;
+  --var-CorMedia: #DE6737;
   --var-verde1: #004539;
   --var-verde2: #16917D;
 
@@ -154,13 +154,6 @@ body.menu-expanded button {
   padding-top: calc(4.1rem + var(--nav-height));
 }
 
-/*=== SERVICES =================================*/
-
-/*=== ABOUT =================================*/
-
-/*=== CONTACT =================================*/
-
-/*=== FOOTER =================================*/
 footer {
   background-color: var(--var-CorPrimario);
   padding-block: 6rem;
@@ -186,7 +179,7 @@ footer {
     border: 3px solid #cfd8dc;
     border-radius: 10px;
   } */
-  /*=== GERAL =================================*/
+ 
   body {
     overflow: auto;
   }
@@ -304,6 +297,7 @@ footer {
     background-color: rgba(0, 16, 0, 0.558);
     backdrop-filter: blur(2px);
     border-radius: 1rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.763);
     
     
   }
@@ -334,11 +328,32 @@ footer {
   .sectionSobre {
     background-color: var(--var-CorSecundario);
   }
+
+  .sectionSobre > .alinhamento {
+    display: flex;
+    border: 1px solid white;
+    justify-content: space-between;
+  }
+
+  .box-Imagem, .box-Conteudo {
+    width: 49%;
+    border: 1px solid white;
+  }
   
 
-  /*=== CONTACT =================================*/
+  /* ------------- Resgastes -------------------*/
 
-  /*=== FOOTER =================================*/
+  .sectionResgates {
+    background-color: var(--var-verde1);
+  }
+
+  /* -------------- Como ajudar ---------------- */
+
+  .sectionAjudar {
+    background-color: var(--var-CorSecundario);
+  }
+
+  /*--------------- FOOTER ----------------------*/
   footer {
     padding: 6.5rem;
   }
