@@ -82,6 +82,7 @@ nav .alinhamento {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 2.4rem;
 }
 
 nav.scroll {
@@ -223,8 +224,8 @@ footer {
   }
 
   #navigation .alinhamento .logo {
-    color: #ffffff;
-    font-size: 2rem;
+    filter: invert(1);
+    width: 16rem;
   }
 
   
@@ -253,7 +254,7 @@ footer {
     content: "";
     width: 0;
     height: 1.3px;
-    background-color: var(--primary-color);
+    background-color: white;
     display: block;
     position: relative;
     bottom: -1rem;
@@ -265,8 +266,12 @@ footer {
     background-color: white;
   }
 
-  nav#navigation .menu li a.ativo::after,
   nav#navigation .menu li a:hover::after {
+    width: 100%;
+    padding-inline: 0.8rem;
+  }
+
+  nav#navigation .menu li a.ativo::after {
     padding-inline: 0.8rem;
     width: 100%;
   }
