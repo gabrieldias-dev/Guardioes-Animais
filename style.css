@@ -20,7 +20,6 @@
   --var-CorMedia: #DE6737;
   --var-verde1: #004539;
   --var-verde2: #16917D;
-
 }
 
 ::-webkit-scrollbar {
@@ -66,7 +65,6 @@ section {
   padding: 5rem;
 }
 
-/*=== CUSTOM COLORS =================================*/
 
 /*=== Navegação =================================*/
 nav {
@@ -143,7 +141,7 @@ body.menu-expanded .menu {
   line-height: 3.1rem;
 }
 
-body.menu-expanded .logo,
+body.menu-expanded .logoScroll,
 body.menu-expanded button {
   position: relative; /*desbloqueia o z-index*/
   z-index: 10;
@@ -185,7 +183,7 @@ footer {
   }
 
   .alinhamento {
-    width: min(120rem, 100%);
+    width: min(160rem, 100%);
   }
 
   section {
@@ -217,8 +215,8 @@ footer {
   }
 
   #navigation .alinhamento .logo {
+    width: 8.5rem;
     filter: invert(1);
-    width: 16rem;
   }
 
   
@@ -319,10 +317,6 @@ footer {
   }
 
 
-
-
-
-
   /*--------------------- Sobre nos ------------------------*/
 
   .sectionSobre {
@@ -331,13 +325,11 @@ footer {
 
   .sectionSobre > .alinhamento {
     display: flex;
-    border: 1px solid white;
     justify-content: space-between;
   }
 
   .box-Imagem, .box-Conteudo {
     width: 49%;
-    border: 1px solid white;
   }
   
 
@@ -345,6 +337,54 @@ footer {
 
   .sectionResgates {
     background-color: var(--var-verde1);
+  }
+
+  .box-Imagem img{
+    border-radius: 1rem;
+
+  }
+
+  .box-Conteudo {
+    padding: 0 2rem;
+    color: white;
+    text-align: justify;
+  }
+
+  .box-Conteudo h2 {
+    font-family: 'Stick No Bills', sans-serif;
+    font-size: 5rem;
+    text-transform: uppercase;
+
+  }
+
+  .box-Conteudo p {
+    padding-top: 1.2rem;
+    font-size: 2.1rem;
+    
+  }
+
+  .btn-saiba {
+    background-color: var(--var-CorPrimario);
+    margin-top: 2rem;
+    width: 25rem;
+    height: 5rem;
+    border-radius: 1rem;
+    transform: scale(1);
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.61);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .btn-saiba a {
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  .btn-saiba:hover {
+    transform: scale(1.06);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.61);
+
   }
 
   /* -------------- Como ajudar ---------------- */

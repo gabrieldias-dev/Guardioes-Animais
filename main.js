@@ -13,10 +13,13 @@ function onScroll() {
 
 function showNavOnScroll() {
   const navigation = document.querySelector("#navigation");
+  const imagemLogo = document.querySelector("#imglogo");
   if (scrollY > 10) {
     navigation.classList.add("scroll");
+    // imagemLogo.src = "assets/pata2.png";
   } else {
     navigation.classList.remove("scroll");
+    // imagemLogo.src = "assets/pataPB.png";
   }
 }
 
