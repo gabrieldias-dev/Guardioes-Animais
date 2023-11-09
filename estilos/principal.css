@@ -321,11 +321,14 @@ footer {
 
   .sectionSobre {
     background-color: var(--var-CorSecundario);
+    z-index: 2;
   }
 
   .sectionSobre > .alinhamento {
     display: flex;
     justify-content: space-between;
+    position: relative;
+    /* overflow: hidden; */
   }
 
   .box-Imagem, .box-Conteudo {
@@ -341,6 +344,7 @@ footer {
     padding: 0 2rem;
     color: white;
     text-align: justify;
+    z-index: 3;
   }
 
   .box-Conteudo h2 {
@@ -380,14 +384,34 @@ footer {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.61);
 
   }
+
+  .patas {
+    width: 30rem;
+    position: absolute;
+    right: 2rem;
+    bottom: -9rem;
+    z-index: 1;
+  }
+
   /* ------------- Resgastes -------------------*/
-
   
-
   .sectionResgates {
-    background-image: url(../assets/bg3.jpg);
+    background-image: url(../assets/bg4.jpg);
+    backdrop-filter: blur(4px);
     background-size: cover;
     background-attachment: fixed;
+  }
+
+  .sectionResgates::before {
+    position: absolute;
+    content:"";
+    width: 100%;
+    height: 100%;
+    background-color: #bebebe33;
+    backdrop-filter: blur(3px);
+    z-index: -1;
+    top: 0;
+    left: 0;
   }
 
   /* -------------- Como ajudar ---------------- */
