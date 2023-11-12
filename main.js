@@ -71,9 +71,9 @@ let swiper = new Swiper(".mySwiper", {
   centeredSlides: true,
   slidesPerView: "auto",
   coverflowEffect: {
-    rotate: 0,
-    stretch: 0,
-    depth: 100,
+    rotate: 7,
+    stretch: 10,
+    depth: 200,
     modifier: 2,
     slideShadows: true,
   },

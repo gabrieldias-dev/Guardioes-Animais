@@ -201,7 +201,7 @@ footer {
     opacity: initial;
     position: initial;
     transform: initial;
-    font-size: initial;
+    font-size: 1.5rem;
     visibility: initial;
     font-weight: initial;
     flex-direction: initial;
@@ -402,6 +402,8 @@ footer {
     background-attachment: fixed;
   }
 
+ 
+
   .sectionResgates h2 {
     font-family: 'Stick No Bills', sans-serif;
     font-size: 5rem;
@@ -431,14 +433,18 @@ footer {
   align-items: center;
   padding: 0;
   overflow: hidden;
-  border: 1px solid white;
+  /* border: 1px solid white; */
+  box-shadow: none;
+
+  
 }
 
 .swiper {
   width: 100%;
   padding-top: 5rem;
   padding-bottom: 5rem;
-  border: 1px solid blue;
+   box-shadow: none;
+  
 }
 
 .swiper-slide {
@@ -447,10 +453,10 @@ footer {
   width: 40rem;
   height: 50rem;
 
-  background-color: #00453abd;
-  box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.221);
+  background-color: #00453ad8;
   filter: blur(3px);
   border-radius: 1rem;
+   
 }
 
 .swiper-3d .swiper-slide-shadow-left,
