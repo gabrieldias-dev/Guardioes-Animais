@@ -333,18 +333,18 @@ footer {
 
   .box-Imagem, .box-Conteudo {
     width: 49%;
+    z-index: 3;
   }
   
   .box-Imagem img{
     border-radius: 1rem;
-
+    
   }
 
   .box-Conteudo {
     padding: 0 2rem;
     color: white;
     text-align: justify;
-    z-index: 3;
   }
 
   .box-Conteudo h2 {
@@ -385,11 +385,11 @@ footer {
 
   }
 
-  .patas {
-    width: 30rem;
+  .passaros{
+    width: 10rem;
     position: absolute;
-    right: 2rem;
-    bottom: -9rem;
+    bottom: -7rem;
+    left: -3rem;
     z-index: 1;
   }
 
@@ -474,6 +474,7 @@ footer {
   padding: 2rem;
   padding-top: 2rem;
   color: #ffffff;
+}
 
  .boxcard img {
   width: 100%;
@@ -496,10 +497,67 @@ footer {
     background-color: var(--var-CorSecundario);
   }
 
+  .sectionAjudar > .alinhamento {
+    border: 1px solid white;
+  }
+
+  .container-ajuda {
+    width: 100%;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .box-ajuda {
+    width: 40rem;
+    height: 35rem;
+    border: 1px solid black;
+  }
+
+  .btn-ajuda{
+    background-color: var(--var-CorPrimario);
+    margin-top: 2rem;
+    width: 25rem;
+    height: 6rem;
+    border-radius: 1rem;
+    transform: scale(1);
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.61);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .btn-ajuda a {
+    color: white;
+    font-size: 1.5rem;
+  }
+
+   .btn-ajuda:hover {
+    transform: scale(1.06);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.61);
+
+  }
+
+
+  
+
+
   /*--------------- FOOTER ----------------------*/
   footer {
     padding: 6.5rem;
   }
 
-}
+  footer > .alinhamento {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-info img {
+    filter: invert(1);
+  }
+  .footer-info {
+    width: 40rem;
+    text-align: justify ;
+  }
+
 }
