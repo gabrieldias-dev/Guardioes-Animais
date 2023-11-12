@@ -293,7 +293,7 @@ footer {
     height: 30rem;
 
     background-color: rgba(0, 16, 0, 0.514);
-    backdrop-filter: ivert(1);
+    backdrop-filter: blur(3px);
     border-radius: 1rem;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.763);
     
@@ -396,10 +396,19 @@ footer {
   /* ------------- Resgastes -------------------*/
   
   .sectionResgates {
-    background-image: url(../assets/bg4.jpg);
+    background-image: url(../assets/bg7.jpg);
     backdrop-filter: blur(4px);
-    background-size: cover;
+    /* background-size: cover; */
     background-attachment: fixed;
+  }
+
+  .sectionResgates h2 {
+    font-family: 'Stick No Bills', sans-serif;
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.566);
+    border-radius: 1rem;
   }
 
   .sectionResgates::before {
@@ -408,12 +417,73 @@ footer {
     width: 100%;
     height: 100%;
     background-color: #bebebe33;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(2px);
     z-index: -1;
     top: 0;
     left: 0;
   }
 
+  .carrossel-resgates {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid white;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  border: 1px solid blue;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 40rem;
+  height: 50rem;
+
+  background-color: #00453abd;
+  box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.221);
+  filter: blur(3px);
+  border-radius: 1rem;
+}
+
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: none;
+}
+
+.swiper-slide-active {
+  filter: blur(0);
+}
+
+.boxcard {
+  position: relative;
+  width: 100%;
+  padding: 2rem;
+  padding-top: 2rem;
+  color: #ffffff;
+
+ .boxcard img {
+  width: 100%;
+
+}
+
+.resgate-conteudo {
+  padding-top: 1.5rem;
+  
+}
+
+.resgate-conteudo p {
+    padding-top: 1rem;
+}
+
+  
   /* -------------- Como ajudar ---------------- */
 
   .sectionAjudar {
@@ -424,4 +494,6 @@ footer {
   footer {
     padding: 6.5rem;
   }
+
+}
 }
