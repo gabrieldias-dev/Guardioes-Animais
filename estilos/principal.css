@@ -411,6 +411,7 @@ footer {
     color: white;
     background-color: rgba(0, 0, 0, 0.566);
     border-radius: 1rem;
+    padding: 2rem 0;
   }
 
   .sectionResgates::before {
@@ -488,6 +489,27 @@ footer {
 
 .resgate-conteudo p {
     padding-top: 1rem;
+}
+
+#setas {
+  margin-top: 2.5rem;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+ 
+  
+
+}
+
+#setas > p {
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.529);
+  border-radius: 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+
 }
 
   
