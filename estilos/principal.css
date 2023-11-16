@@ -454,7 +454,7 @@ footer {
   width: 40rem;
   height: 50rem;
 
-  background-color: #00453ad8;
+  background-color: #00453af8;
   filter: blur(3px);
   border-radius: 1rem;
    
@@ -491,26 +491,6 @@ footer {
     padding-top: 1rem;
 }
 
-#setas {
-  margin-top: 2.5rem;
-  padding: 1rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
- 
-  
-
-}
-
-#setas > p {
-  padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.529);
-  border-radius: 1rem;
-  font-size: 2rem;
-  font-weight: 500;
-
-}
 
   
   /* -------------- Como ajudar ---------------- */
@@ -532,8 +512,9 @@ footer {
 
   .box-ajuda {
     width: 40rem;
-    height: 35rem;
-    border: 1px solid black;
+    height: 45rem;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.442);
   }
 
   .btn-ajuda{
@@ -558,6 +539,27 @@ footer {
     transform: scale(1.06);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.61);
 
+  }
+
+  #ajudar .doacao {
+    background-image: url(../assets/arara.jpg);
+    background-color: #00856e;
+    background-size: cover;
+    
+  }
+
+  #ajudar .lojinha {
+    background-image: url(../assets/gatinhoedoguinho.jpg);
+    background-color: #00856e;
+    background-size: cover;
+    
+  }
+
+  #ajudar .adote {
+    background-image: url(../assets/adote.jpg);
+    background-color: #00856e;
+    background-size: cover;
+    
   }
 
 
