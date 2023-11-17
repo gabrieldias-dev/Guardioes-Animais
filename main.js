@@ -73,7 +73,7 @@ let swiper = new Swiper(".mySwiper", {
   coverflowEffect: {
     rotate: 7,
     stretch: 10,
-    depth: 200,
+    depth: 154,
     modifier: 2,
     slideShadows: true,
   },
