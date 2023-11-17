@@ -496,7 +496,8 @@ footer {
   /* -------------- Como ajudar ---------------- */
 
   .sectionAjudar {
-    background-color: var(--var-CorSecundario);
+    background-color: var(--var-verde1);
+    background-image: url(../assets/bg4.jpg);
   }
 
   .sectionAjudar > .alinhamento {
@@ -511,10 +512,12 @@ footer {
   }
 
   .box-ajuda {
+    position: relative;
     width: 40rem;
     height: 45rem;
     border-radius: 1rem;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.442);
+    background-color: var(--var-CorSecundario);
   }
 
   .btn-ajuda{
@@ -542,26 +545,36 @@ footer {
   }
 
   #ajudar .doacao {
-    background-image: url(../assets/arara.jpg);
-    background-color: #00856e;
     background-size: cover;
     
   }
 
+  /* .doacao::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    left: 0;
+    z-index: 0;
+    backdrop-filter: blur(5px);
+  } */
+
   #ajudar .lojinha {
-    background-image: url(../assets/gatinhoedoguinho.jpg);
-    background-color: #00856e;
+    color: rgb(0, 0, 0);
     background-size: cover;
+    overflow: hidden;
+    border: 1px solid rgb(0, 0, 0);
     
   }
 
   #ajudar .adote {
-    background-image: url(../assets/adote.jpg);
-    background-color: #00856e;
     background-size: cover;
+    overflow: hidden;
     
   }
 
+  
 
   
 
