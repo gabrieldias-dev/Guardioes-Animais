@@ -400,6 +400,7 @@ footer {
     backdrop-filter: blur(4px);
     /* background-size: cover; */
     background-attachment: fixed;
+    
   }
 
  
@@ -491,6 +492,111 @@ footer {
     padding-top: 1rem;
 }
 
+.numeros-resgates {
+  width: 100%;
+  background-color: var(--var-CorSecundario);
+  padding: 2rem 0;
+}
+
+.numeros-resgates > .alinhamento {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem 2rem;
+
+}
+
+.box-numeros {
+  width: 30%;
+  height: 25rem;
+  border-radius: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.box-numeros p {
+  font-size: 3rem;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+
+}
+
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.box-numeros:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background-color: var(--var-CorMedia);
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  border-radius: 1rem;
+  justify-content: center;
+  transform: rotateY(0deg);
+
+  box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.359);
+}
+
+.card-front p {
+  padding: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.499);
+  border-radius: .5rem;
+  backdrop-filter: blur(4px);
+}
+
+.card1 {
+  background-image: url(../assets/bg3.jpg);
+  background-size: cover;
+}
+
+.card2 {
+  background-image: url(../assets/arara-gaiola.jpg);
+  background-size: cover;
+}
+
+.card3 {
+  background-image: url(../assets/fami-feliz.jpg);
+  background-size: cover;
+}
+
+
+.card-back {
+  background-color: var(--var-verde2);
+  display: flex;
+  align-items: center;
+  border-radius: 1rem;
+  justify-content: center;
+  transform: rotateY(180deg);
+  
+
+  box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.359);
+}
+
+.card-back p {
+  font-size: 2rem;
+  padding: 0 1rem;
+}
+
 
   
   /* -------------- Como ajudar ---------------- */
@@ -498,26 +604,56 @@ footer {
   .sectionAjudar {
     background-color: var(--var-verde1);
     background-image: url(../assets/bg4.jpg);
+    background-attachment: fixed;
+  }
+
+  .sectionAjudar h2 {
+    color: white;
+    font-size: 3.5rem;
   }
 
   .sectionAjudar > .alinhamento {
-    border: 1px solid white;
+    background-color: rgba(0, 16, 0, 0.514);
+    backdrop-filter: blur(3px);
+    border-radius: 1rem;
   }
 
   .container-ajuda {
     width: 100%;
     padding: 2rem 0;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 4rem;
   }
 
   .box-ajuda {
     position: relative;
+    color: white;
     width: 40rem;
-    height: 45rem;
+    height: 52rem;
     border-radius: 1rem;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.442);
     background-color: var(--var-CorSecundario);
+    overflow: hidden;
+  }
+
+  .box-ajuda img {
+    width: 100%;
+    height: 55%;
+    margin-bottom: 1.3rem;
+  }
+
+  .box-ajuda h3 {
+    font-size: 2.5rem;
+
+  }
+
+  .box-ajuda p {
+    font-size: 2rem;
+    padding: 0 1.2rem;
+    margin-top: 1rem;
+    text-align: justify;
   }
 
   .btn-ajuda{
@@ -536,6 +672,7 @@ footer {
   .btn-ajuda a {
     color: white;
     font-size: 1.5rem;
+    text-transform: uppercase;
   }
 
    .btn-ajuda:hover {
@@ -544,33 +681,18 @@ footer {
 
   }
 
+ 
   #ajudar .doacao {
     background-size: cover;
-    
   }
 
-  /* .doacao::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    left: 0;
-    z-index: 0;
-    backdrop-filter: blur(5px);
-  } */
 
   #ajudar .lojinha {
-    color: rgb(0, 0, 0);
     background-size: cover;
-    overflow: hidden;
-    border: 1px solid rgb(0, 0, 0);
-    
   }
 
   #ajudar .adote {
     background-size: cover;
-    overflow: hidden;
     
   }
 
