@@ -366,17 +366,17 @@ footer {
     width: 25rem;
     height: 6rem;
     border-radius: 1rem;
-    transform: scale(1);
     border: none;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.61);
     transition: 0.5s;
     cursor: pointer;
   }
 
-  .btn-saiba a {
+  .box-Conteudo .btn-saiba > a {
+    width: 100%;
+    padding: 2rem 8rem;
     color: white;
     font-size: 1.6rem;
-    
   }
 
   .btn-saiba:hover {
@@ -603,7 +603,7 @@ footer {
 
   .sectionAjudar {
     background-color: var(--var-verde1);
-    background-image: url(../assets/bg4.jpg);
+    background-image: url(../assets/bg9.jpg);
     background-attachment: fixed;
   }
 
@@ -624,14 +624,14 @@ footer {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
 
   .box-ajuda {
     position: relative;
     color: white;
     width: 40rem;
-    height: 52rem;
+    height: 58rem;
     border-radius: 1rem;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.442);
     background-color: var(--var-CorSecundario);
@@ -659,8 +659,8 @@ footer {
   .btn-ajuda{
     background-color: var(--var-CorPrimario);
     margin-top: 2rem;
-    width: 25rem;
-    height: 6rem;
+    width: 24rem;
+    height: 5.5rem;
     border-radius: 1rem;
     transform: scale(1);
     border: none;
