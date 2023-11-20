@@ -191,7 +191,6 @@ section {
     font-size: 2.2rem;
     padding-bottom: 2rem;
     text-align: justify;
-    text-indent: 5rem;
   }
 
 
@@ -309,10 +308,10 @@ h3 {
 
 .flip-card-back p {
     font-size: 2.3rem;
-    text-align: justify;
+    text-align: center;
 }
 
-/* --------- Recuros tecnologicos --------------- */
+/* --------- Recursos tecnologicos --------------- */
 
 #tecnologia {
     position: relative;
@@ -327,8 +326,9 @@ h3 {
  .container-tecnologia {
     width: 100%;
     color: white;
-    background-color: rgba(0, 0, 0, 0.852);
+    background-color: rgba(0, 0, 0, 0.688);
     border-radius: 1rem;
+    padding: 5rem 1rem;
  }
 
  .container-tecnologia p {
@@ -355,17 +355,32 @@ h3 {
 
  .lado-esquerdo p {
     text-align: justify;
-    padding-left: 1rem;
+    padding-left: 1.5rem;
  }
 
+  .lado-direito {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 8rem 0;
+    padding: 0 2rem;
+ }
 
+ .lado-direito img {
+    width: 50%;
+    border-radius: 1rem;
+    
+ }
 
-
-
+ .lado-direito p {
+    text-align: justify;
+    padding-right: 1.5rem;
+ }
 
   /*=== FOOTER =================================*/
   footer {
     padding: 6.5rem;
+    background-color: var(--var-CorSecundario);
   }
 
 }
