@@ -703,20 +703,62 @@ footer {
 
   /*--------------- FOOTER ----------------------*/
   footer {
-    padding: 6.5rem;
+    padding: 2rem 0;
   }
 
   footer > .alinhamento {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 
-  .footer-info img {
+  footer h3 {
+    font-size: 2.1rem;
+    margin-bottom: 1rem;
+  }
+
+  footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.7rem;
+  }
+
+  footer ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-logo img {
+    width: 25rem;
     filter: invert(1);
   }
-  .footer-info {
+  .footer-logo {
     width: 40rem;
     text-align: justify ;
   }
 
+  .footer-menu ul, .footer-ajudar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    
+  }
+ 
+
+  .footer-icones ul {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .footer-icones ul li {
+    width: 3.8rem;
+    transition: all .3s;
+  }
+
+   .footer-icones ul li:hover {
+    transform: scale(1.15);
+  }
+
+  .footer-icones img {
+    width: 100%;
+    filter: invert(1);
+  }
 }
