@@ -581,7 +581,7 @@ footer {
 
 
 .card-back {
-  background-color: var(--var-verde2);
+  background-color: var(--var-CorMedia);
   display: flex;
   align-items: center;
   border-radius: 1rem;
@@ -760,5 +760,7 @@ footer {
   .footer-icones img {
     width: 100%;
     filter: invert(1);
+  
   }
 }
+

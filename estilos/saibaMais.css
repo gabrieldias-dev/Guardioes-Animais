@@ -298,7 +298,7 @@ h3 {
 }
 
 .flip-card-back {
-  background-color: var(--var-CorSecundario);
+  background-color: var(--var-verde2);
   color: white;
   transform: rotateY(180deg);
   display: flex;
@@ -380,7 +380,7 @@ h3 {
   /*=== FOOTER =================================*/
   footer {
     padding: 2rem 0;
-    background-color: var(--var-CorSecundario);
+    background-color: var(--var-CorPrimario);
     color: white;
   }
 
