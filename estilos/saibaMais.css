@@ -379,8 +379,65 @@ h3 {
 
   /*=== FOOTER =================================*/
   footer {
-    padding: 6.5rem;
+    padding: 2rem 0;
     background-color: var(--var-CorSecundario);
+    color: white;
+  }
+
+  footer > .alinhamento {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  footer h3 {
+    font-size: 2.1rem;
+    margin-bottom: 1rem;
+  }
+
+  footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.7rem;
+  }
+
+  footer ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-logo img {
+    width: 25rem;
+    filter: invert(1);
+  }
+  .footer-logo {
+    width: 40rem;
+    text-align: justify ;
+  }
+
+  .footer-menu ul, .footer-ajudar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    
+  }
+ 
+
+  .footer-icones ul {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .footer-icones ul li {
+    width: 3.8rem;
+    transition: all .3s;
+  }
+
+   .footer-icones ul li:hover {
+    transform: scale(1.15);
+  }
+
+  .footer-icones img {
+    width: 100%;
+    filter: invert(1);
   }
 
 }
