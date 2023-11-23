@@ -232,6 +232,7 @@ section {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+    margin-top: 5rem;
     margin-bottom: 1.5rem;
   }
 
@@ -326,7 +327,7 @@ h3 {
  .container-tecnologia {
     width: 100%;
     color: white;
-    background-color: rgba(0, 0, 0, 0.688);
+    background-color: rgba(70, 70, 70, 0.219);
     border-radius: 1rem;
     padding: 5rem 1rem;
  }

@@ -84,7 +84,7 @@ nav .alinhamento {
 }
 
 nav.scroll {
-  background-color: var(--var-CorPrimario);
+  background-color: #451705fa;
 }
 
 nav button {
@@ -293,9 +293,9 @@ footer {
     height: 30rem;
 
     background-color: rgba(0, 16, 0, 0.514);
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(2px);
     border-radius: 1rem;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.763);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.74);
     
     
   }
@@ -431,14 +431,13 @@ footer {
   position: relative;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0;
   overflow: hidden;
   /* border: 1px solid white; */
   box-shadow: none;
-
-  
 }
 
 .swiper {
@@ -446,6 +445,7 @@ footer {
   padding-top: 5rem;
   padding-bottom: 5rem;
    box-shadow: none;
+   
   
 }
 
@@ -704,6 +704,7 @@ footer {
   /*--------------- FOOTER ----------------------*/
   footer {
     padding: 2rem 0;
+   
   }
 
   footer > .alinhamento {
@@ -760,7 +761,6 @@ footer {
   .footer-icones img {
     width: 100%;
     filter: invert(1);
-  
   }
 }
 
