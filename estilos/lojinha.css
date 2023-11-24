@@ -179,7 +179,7 @@ section {
   }
 
   .cabecaGato {
-    width: 45rem;
+    width: 40rem;
     transform: rotate(180deg);
     top: 0;
     right: 30%;
@@ -202,16 +202,18 @@ section {
   }
 
   .boxProdutos {
-    border: 1px solid black;
     width: 30rem;
     height: 35rem;
     margin-top: 4rem;
+    background-color: rgba(162, 28, 28, 0.5);
+    border-radius: 1rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
   }
 
   .box-img {
     width: 100%;
     height: 55%;
-    
     overflow: hidden;
   }
 
@@ -219,9 +221,14 @@ section {
     width: 100%;
   }
 
+  h3 {
+    font-size: 3rem;
+    color: white;
+    
+  }
+
   .valor-info {
     border: 1px solid white;
-    
   }
 
 
