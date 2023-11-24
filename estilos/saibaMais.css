@@ -1,4 +1,7 @@
-/*=== GERAL =================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100;300&family=Lugrasimo&family=Stick+No+Bills:wght@200;300&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -25,6 +28,8 @@
 
 html {
   scroll-behavior: smooth;
+  font-family: 'Montserrat', sans-serif;
+  
 }
 
 html,
@@ -39,6 +44,11 @@ body {
   overflow: overlay; /*fazendo a barra de rolagem ficar sobreposta na pagina*/
   background-color: rgb(126, 225, 126);
   scrollbar-color: #00856e;
+}
+
+h1, h2, h3 {
+  font-family: 'Stick No Bills', sans-serif;
+  font-weight: 600;
 }
 
 .alinhamentoGeral {
@@ -142,7 +152,7 @@ section {
     padding: 3rem 2rem;
     width: 55%;
     color: white;
-    background-color: rgba(0, 0, 0, 0.668);
+    background-color: rgba(0, 0, 0, 0.400);
     backdrop-filter: blur(5px); 
     border-radius: 1rem;
     
@@ -165,8 +175,24 @@ section {
   /* -------- Nossa historia --------------- */
 
   #nossaHistoria {
+    position: relative;
     background-color: var(--var-verde1);
+    overflow: hidden;
   }
+
+  .img-patas {
+    position: absolute;
+    bottom: 25%;
+    left: -15rem;
+    transform: rotate(-70deg);
+  }
+
+  .img-patas img {
+    width: 60rem;
+    
+  }
+
+  
 
   #nossaHistoria > .alinhamentoGeral {
     display: flex;
@@ -177,6 +203,7 @@ section {
     width: 80%;
     padding: 3rem;
     color: white;
+    z-index: 1;
   }
 
 
@@ -191,6 +218,7 @@ section {
     font-size: 2.2rem;
     padding-bottom: 2rem;
     text-align: justify;
+    
   }
 
 
@@ -209,7 +237,7 @@ section {
   }
 
   .box-missao {
-    background-color: rgba(0, 0, 0, 0.771);
+    background-color: rgba(0, 0, 0, 0.400);
     backdrop-filter: blur(2px); 
     border-radius: 1rem;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.715);
@@ -319,7 +347,7 @@ h3 {
     min-height: 100vh;
     background-color: black;
     background-image: url(../assets/bg11.jpg);
-    background-size: cover;
+    background-size: cover; 
     z-index: 0;
  }
 
@@ -327,9 +355,10 @@ h3 {
  .container-tecnologia {
     width: 100%;
     color: white;
-    background-color: rgba(70, 70, 70, 0.219);
+    background-color: rgba(0, 0, 0, 0.219);
     border-radius: 1rem;
     padding: 5rem 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.695);
  }
 
  .container-tecnologia p {

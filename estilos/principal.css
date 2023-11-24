@@ -15,11 +15,12 @@
   font-size: 62.5%;
   --nav-height: 7.2rem;
 
-  --var-CorPrimario: #451705;
+  --var-CorPrimario: #571e07;
   --var-CorSecundario: #913916;
   --var-CorMedia: #DE6737;
   --var-verde1: #004539;
   --var-verde2: #16917D;
+  --var-btnhover:#9c4719;
 }
 
 ::-webkit-scrollbar {
@@ -84,7 +85,7 @@ nav .alinhamento {
 }
 
 nav.scroll {
-  background-color: #451705fa;
+  background-color: rgba(71, 24, 5, 0.99)
 }
 
 nav button {
@@ -292,7 +293,7 @@ footer {
     width: 100%;
     height: 30rem;
 
-    background-color: rgba(0, 16, 0, 0.514);
+    background-color: rgba(0, 16, 0, 0.370);
     backdrop-filter: blur(2px);
     border-radius: 1rem;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.74);
@@ -381,7 +382,8 @@ footer {
 
   .btn-saiba:hover {
     transform: scale(1.06);
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.61);
+    box-shadow: 7px 7px 8px rgba(0, 0, 0, 0.61);
+    background-color: var(--var-btnhover);
 
   }
 
@@ -410,7 +412,7 @@ footer {
     font-size: 5rem;
     text-transform: uppercase;
     color: white;
-    background-color: rgba(0, 0, 0, 0.566);
+    background-color: rgba(0, 0, 0, 0.370);
     border-radius: 1rem;
     padding: 2rem 0;
   }
@@ -613,7 +615,7 @@ footer {
   }
 
   .sectionAjudar > .alinhamento {
-    background-color: rgba(0, 16, 0, 0.514);
+    background-color: rgba(0, 16, 0, 0.370);
     backdrop-filter: blur(3px);
     border-radius: 1rem;
   }
@@ -678,6 +680,7 @@ footer {
    .btn-ajuda:hover {
     transform: scale(1.06);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.61);
+    background-color: var(--var-btnhover);
 
   }
 
