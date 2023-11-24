@@ -34,7 +34,8 @@ html {
 }
 
 html,
-body {
+body,
+main {
   width: 100%;
   height: 100%;
 }
@@ -699,15 +700,10 @@ footer {
     
   }
 
-  
-
-  
-
 
   /*--------------- FOOTER ----------------------*/
   footer {
     padding: 2rem 0;
-   
   }
 
   footer > .alinhamento {
