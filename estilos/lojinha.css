@@ -38,6 +38,10 @@ body {
   height: 100%;
 }
 
+p {
+  font-family: 'Montserrat', sans-serif;
+}
+
 body {
   font-size: 1.6rem;
   text-align: center;
@@ -68,20 +72,20 @@ section {
 /* quando o dispositivo tiver minimo 1024px pra cima  */
 @media (min-width: 1024px) {
   
-    /* ::-webkit-scrollbar {
+     ::-webkit-scrollbar {
     width: 1.3rem;
   }
 
   ::-webkit-scrollbar-track {
-    background: var(--bg-light);
-    border: 0.5px solid #cfd8dc;
+    background: rgb(0, 0, 0);
+    border: 0.5px solid #42aad6;
   }
 
   ::-webkit-scrollbar-thumb {
     background: var(--primary-color);
-    border: 3px solid #cfd8dc;
+    border: 2px solid #cfd8dc;
     border-radius: 10px;
-  }  */
+  }  
 
   /*=== GERAL =================================*/
   body {
@@ -97,7 +101,7 @@ section {
   }
 
   
-  /* -------------  ---------- */
+  /* ------------- inicio ---------- */
     .voltar-home {
     position: fixed;
     left: 1rem;
@@ -179,7 +183,7 @@ section {
   }
 
   .cabecaGato {
-    width: 40rem;
+    width: 50rem;
     transform: rotate(180deg);
     top: 0;
     right: 30%;
@@ -188,32 +192,37 @@ section {
   .dogCaramelo {
     transform: rotateY(200deg);
     right: -2rem;
-    top: 0;
-    width: 29rem;
+    bottom: 0;
+    width: 35rem;
   }
 
-  /* Itens a venda */
+  /* ----------------- Itens a venda ------------------ */
+
+  #itens-vendas {
+    background-color: white;
+  }
 
   .containerProdutos {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    color: rgb(240, 240, 240);
   }
 
   .boxProdutos {
     width: 30rem;
-    height: 35rem;
+    height: 42rem;
     margin-top: 4rem;
-    background-color: rgba(162, 28, 28, 0.5);
+    background-color: rgba(0, 0, 0, 0.733);
     border-radius: 1rem;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.664);
     overflow: hidden;
   }
 
   .box-img {
     width: 100%;
-    height: 55%;
+    height: 50%;
     overflow: hidden;
   }
 
@@ -221,14 +230,43 @@ section {
     width: 100%;
   }
 
+  .valor-info {
+    height: 50%;
+    padding: 0 1rem;
+  }
+
   h3 {
     font-size: 3rem;
     color: white;
+    padding: 0.5rem 0;
     
   }
 
-  .valor-info {
-    border: 1px solid white;
+  .valor-info p {
+    margin: .7rem 0;
+    font-size: 1.8rem;
+  }
+
+  .preco-item {
+    display: block;
+    font-size: 2.3rem;
+    padding-top: 1rem;
+  }
+
+  
+
+  .btn-comprar {
+    color: white;
+    border: none;
+    padding: 1.5rem 9rem;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    background-color: var(--var-verde2);
+    transition: all 0.3s;
+  }
+
+  .btn-comprar:hover {
+    transform: scale(1.1);
   }
 
 
