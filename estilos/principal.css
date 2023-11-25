@@ -396,14 +396,7 @@ footer {
 
   }
 
-  .passaros{
-    width: 10rem;
-    position: absolute;
-    bottom: -7rem;
-    left: -3rem;
-    z-index: 1;
-  }
-
+ 
   /* ------------- Resgastes -------------------*/
   
   .sectionResgates {
@@ -700,16 +693,12 @@ footer {
   }
 
   .btn-ajuda a {
-    height: 100%;
+    padding: 2rem 4.8rem;
     color: white;
     font-size: 1.5rem;
     text-transform: uppercase;
-    border: 1px solid white;
+    
   }
-
-  
-
- 
 
    .btn-ajuda:hover {
     transform: scale(1.06);

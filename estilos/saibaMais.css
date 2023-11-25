@@ -187,9 +187,17 @@ section {
     transform: rotate(-70deg);
   }
 
-  .img-patas img {
+  .img-patas img, .img-patas2 img {
     width: 60rem;
     
+  }
+
+  .img-patas2 {
+    position: absolute;
+    right: -10%;
+    bottom: 20%;
+    transform: rotate(-110deg);
+    filter: invert(1);
   }
 
   
@@ -203,7 +211,7 @@ section {
     width: 80%;
     padding: 3rem;
     color: white;
-    z-index: 1;
+    z-index: 2;
   }
 
 
