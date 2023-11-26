@@ -198,13 +198,14 @@ section {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    gap: 1rem;
     color: rgb(240, 240, 240);
   }
 
   .boxAnimais {
     width: 38rem;
-    height: 45rem;
+    height: 41rem;
     margin-top: 4rem;
     background-color: rgba(0, 0, 0, 0.733);
     border-radius: 1rem;
@@ -231,7 +232,7 @@ section {
   h3 {
     font-size: 3rem;
     color: white;
-    padding: 0.5rem 0;
+    padding: 1.5rem 0;
     
   }
 
@@ -240,7 +241,7 @@ section {
     font-size: 1.8rem;
   }
 
-  .btn-comprar {
+  .btn-adotar {
     cursor: pointer;
     font-size: 1.6rem;
     color: white;
@@ -252,7 +253,7 @@ section {
     transition: all 0.3s;
   }
 
-  .btn-comprar:hover {
+  .btn-adotar:hover {
     transform: scale(1.1);
   }
 
