@@ -264,6 +264,82 @@ section {
   }
 
 
+  /*  --------- form adocao ------------- */
+
+  #formAdocao {
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(../assets/bg-adote.jpg);
+  background-size: cover;
+}
+
+#formAdocao > .alinhamentoGeral {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#formAdocao .alinhamentoGeral > h2 {
+  font-size: 5rem;
+  color: white;
+  margin-bottom: 2rem;
+  
+}
+
+form {
+  color: white;
+  font-size: 2rem;
+  background-color: #0000006c;
+  backdrop-filter: blur(4px);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.399);
+  width: 45rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#formAdocao > div {
+    display: flex;
+    justify-content: center;
+}
+
+input[type="submit"] {
+font-size: 1.7rem;
+  width: 80%;
+  background-color: var(--var-verde2);
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 2rem;
+  padding: 1.5rem 0;
+  transition: all .3s;
+  margin-top: 1rem;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.05);
+  background-color: var(--var-verde1);
+}
+
+
+
 
   /*=== FOOTER =================================*/
   footer {
