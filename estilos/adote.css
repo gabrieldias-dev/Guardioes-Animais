@@ -206,7 +206,7 @@ section {
 
   .boxAnimais {
     width: 38rem;
-    height: 41rem;
+    height: 45rem;
     margin-top: 4rem;
     background-color: rgba(0, 0, 0, 0.733);
     border-radius: 1rem;
@@ -233,12 +233,11 @@ section {
   h3 {
     font-size: 3rem;
     color: white;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     
   }
 
   .valor-info p {
-    margin: .7rem 0;
     font-size: 1.8rem;
   }
 
@@ -249,7 +248,7 @@ section {
     font-size: 1.6rem;
     color: white;
     border: none;
-    margin-top: 1rem;
+    margin-top: 2rem;
     border-radius: .5rem;
     background-color: var(--var-verde2);
     transition: all 0.3s;

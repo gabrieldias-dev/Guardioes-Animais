@@ -95,6 +95,11 @@ nav .close-menu {
 }
 
 /*=== MENU-Expandido - Telas menores =================================*/
+
+.logo {
+  filter: invert(1);
+  width: 16rem;
+}
 body.menu-expanded {
   overflow: hidden;
 }
@@ -119,7 +124,7 @@ body.menu-expanded .close-menu {
 body.menu-expanded .menu {
   top: 0;
   left: 0;
-  background-color: #00856e;
+  background-color: var(--var-CorPrimario);
   width: 100vw;
   height: 100vh;
   padding-top: var(--nav-height);
@@ -137,23 +142,572 @@ body.menu-expanded .menu {
   line-height: 3.1rem;
 }
 
+.menu .menu-expandido a {
+  color: black;
+}
+
+.social-links {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social-links img {
+  width: 5rem;
+}
+
 body.menu-expanded .logoScroll,
 body.menu-expanded button {
   position: relative; /*desbloqueia o z-index*/
   z-index: 10;
 }
 
-/*==== #HOME =========================================================*/
+
+@media (max-width: 1023px) {
+  /*-------------- #HOME telas menos ------------------------ */
 #home {
   padding-top: calc(4.1rem + var(--nav-height));
 }
+
+#home {
+    padding-top: var(--nav-height);
+    width: 100vw;
+    min-height: 100vh;
+  }
+
+  .sectionHome {
+    height: 100%;
+    background-image: url(../assets/bg1.jpg);
+    background-position: center;
+    background-size: cover; 
+    background-attachment: fixed;
+
+    display: flex;
+  }
+
+  .containerHome {
+    color: rgb(224, 224, 224);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30rem;
+
+    background-color: rgba(0, 16, 0, 0.370);
+    backdrop-filter: blur(2px);
+    border-radius: 1rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.74);
+    
+    
+  }
+
+
+  .containerHome h1 {
+    color: rgb(224, 224, 224);
+    font-size: 5rem;
+    font-weight: 600;
+    font-family: 'Stick No Bills', sans-serif;
+    padding: 2rem 0;
+  }
+
+  .containerHome p {
+    font-size: 1.5rem;
+    padding: 2rem 0;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+
+
+
+
+
+
+  /*  Sobre - telas menores */
+
+  .sectionSobre {
+    position: relative;
+    background-image: url(../assets/bgs2.jpg);
+    background-position: bottom right;
+    z-index: 2;
+  }
+
+   .sectionSobre::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(71, 24, 5, 0.82);
+    left: 0;
+    top: 0;
+  } 
+  
+  .sectionSobre > .alinhamento {
+    position: relative;
+    /* overflow: hidden; */
+  }
+
+  .box-Imagem, .box-Conteudo {
+    width: 100%;
+    z-index: 3;
+  }
+  
+  .box-Imagem img{
+    border-radius: 1rem;
+    
+  }
+
+  .box-Conteudo {
+    padding: 0 2rem;
+    color: white;
+    text-align: justify;
+  }
+
+  .box-Conteudo h2 {
+    font-family: 'Stick No Bills', sans-serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+
+  }
+
+  .box-Conteudo p {
+    padding-top: 1.2rem;
+    font-size: 1.5rem;
+  }
+
+  .btn-saiba {
+    background-color: var(--var-CorSecundario);
+    margin-top: 2rem;
+    width: 20rem;
+    height: 4rem;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.61);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .box-Conteudo .btn-saiba > a {
+    width: 100%;
+    padding: 1.5rem 4rem;
+    color: white;
+    font-size: 1.5rem;
+  }
+
+/* ----------- Resgates - telas menores ---------- */
+
+.sectionResgates {
+    background-image: url(../assets/bg7.jpg);
+    backdrop-filter: blur(4px);
+    /* background-size: cover; */
+    background-attachment: fixed;
+    
+  }
+
+  .sectionResgates > .alinhamento {
+     width: min(70rem, 100%); /* quando a largura for menor que 50rem(500px) pega 100% */
+  }
+
+ 
+
+  .sectionResgates h2 {
+    font-family: 'Stick No Bills', sans-serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.370);
+    border-radius: 1rem;
+    padding: 2rem 0;
+  }
+
+  .sectionResgates::before {
+    position: absolute;
+    content:"";
+    width: 100%;
+    height: 100%;
+    background-color: #bebebe33;
+    backdrop-filter: blur(2px);
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+
+  .carrossel-resgates {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  overflow: hidden;
+  /* border: 1px solid white; */
+  box-shadow: none;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+   box-shadow: none;
+   
+  
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 25rem;
+  height: 40rem;
+
+  background-color: #00453af8;
+  filter: blur(3px);
+  border-radius: 1rem;
+   
+}
+
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: none;
+}
+
+.swiper-slide-active {
+  filter: blur(0);
+}
+
+.boxcard {
+  position: relative;
+  width: 100%;
+  padding: 2rem;
+  padding-top: 2rem;
+  color: #ffffff;
+}
+
+ .boxcard img {
+  width: 100%;
+
+}
+
+.resgate-conteudo {
+  padding-top: 1.5rem;
+  
+}
+
+.resgate-conteudo p {
+  font-size: 1.2rem;
+    padding-top: 1rem;
+}
+
+
+/* ------------ card informações - telas menores  ----------------- */
+.numeros-resgates {
+  position: relative;
+  width: 100%;
+  background-image: url(../assets/bgs3.jpg);
+  background-size: cover;
+  padding: 2rem 0;
+}
+
+ .numeros-resgates::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(71, 24, 5, 0.82);
+    top: 0;
+    left: 0;
+
+  }
+
+.numeros-resgates > .alinhamento {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 2rem;
+
+}
+
+
+.box-numeros {
+  width: 70%;
+  height: 15rem;
+  border-radius: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.box-numeros p {
+  font-size: 1.5rem;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+
+}
+
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.box-numeros:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background-color: var(--var-CorMedia);
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  border-radius: 1rem;
+  justify-content: center;
+  transform: rotateY(0deg);
+
+  box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.359);
+}
+
+.card-front p {
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.499);
+  border-radius: .5rem;
+  backdrop-filter: blur(4px);
+  font-size: 1rem;
+}
+
+.card1 {
+  background-image: url(../assets/bg3.jpg);
+  background-size: cover;
+}
+
+.card2 {
+  background-image: url(../assets/arara-gaiola.jpg);
+  background-size: cover;
+}
+
+.card3 {
+  background-image: url(../assets/fami-feliz.jpg);
+  background-size: cover;
+}
+
+
+.card-back {
+  background-color: var(--var-CorMedia);
+  display: flex;
+  align-items: center;
+  border-radius: 1rem;
+  justify-content: center;
+  transform: rotateY(180deg);
+  
+
+  box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.359);
+}
+
+.card-back p {
+  font-size: 1rem;
+  padding: 0 1rem;
+}
+
+
+/* ----------- como ajudar - telas menores -------------- */
+
+.sectionAjudar {
+    background-color: var(--var-verde1);
+    background-image: url(../assets/bg9.jpg);
+    background-attachment: fixed;
+  }
+
+  .sectionAjudar h2 {
+   font-family: 'Stick No Bills', sans-serif;
+    color: white;
+    font-size: 5rem;
+    font-weight: 700;
+  }
+
+  .sectionAjudar > .alinhamento {
+    background-color: rgba(0, 16, 0, 0.370);
+    backdrop-filter: blur(3px);
+    border-radius: 1rem;
+    margin-top: 7rem;
+    }
+
+  .container-ajuda {
+    width: 100%;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .box-ajuda {
+    position: relative;
+    color: white;
+    width: 100%;
+    height: 40rem;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.442);
+    background-color: var(--var-CorSecundario);
+    overflow: hidden;
+  }
+
+  .box-ajuda img {
+    width: 100%;
+    height: 50%;
+    margin-bottom: 1.3rem;
+  }
+
+  .box-ajuda h3 {
+    font-size: 2rem;
+
+  }
+
+  .box-ajuda p {
+    font-size: 1.5rem;
+    padding: 0 1.2rem;
+    margin-top: 1rem;
+    text-align: justify;
+  }
+
+  .btn-ajuda{
+    background-color: var(--var-CorPrimario);
+    margin-top: 2rem;
+    width: 20rem;
+    height: 5rem;
+    border-radius: 1rem;
+    transform: scale(1);
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.61);
+    transition: 0.5s;
+    cursor: pointer;
+
+   
+  }
+
+  .btn-ajuda a {
+    padding: 2rem 2rem;
+    color: white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    
+  }
+
+ 
+  #ajudar .doacao {
+    background-size: cover;
+  }
+
+
+  #ajudar .lojinha {
+    background-size: cover;
+  }
+
+  #ajudar .adote {
+    background-size: cover;
+    
+  }
+
+
+
+/* footer - telas menores */
 
 footer {
   background-color: var(--var-CorPrimario);
   padding-block: 6rem;
   text-align: left;
   color: white;
+  padding: 2rem 0;
 }
+
+
+  footer > .alinhamento {
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  footer h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+  }
+
+  footer ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-logo img {
+    width: 20rem;
+    filter: invert(1);
+  }
+
+  .footer-logo {
+    width: 100%;
+    text-align: justify;
+    margin-bottom: 1rem;
+  }
+
+  .footer-menu {
+    margin-bottom: 2rem;
+  }
+
+  .footer-menu ul, .footer-ajudar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    
+  }
+
+  .footer-ajudar {
+    margin-bottom: 2rem;
+  }
+ 
+
+  .footer-icones ul {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .footer-icones ul li {
+    width: 3.8rem;
+    transition: all .3s;
+  }
+
+   .footer-icones ul li:hover {
+    transform: scale(1.15);
+  }
+
+  .footer-icones img {
+    width: 100%;
+    filter: invert(1);
+  }
+
+
+}
+
+
 
 /*------- TELAS MAIORES QUE 1024PX (DESKTOP ETC..) -----------------*/
 
@@ -729,6 +1283,7 @@ footer {
   /*--------------- FOOTER ----------------------*/
   footer {
     padding: 2rem 0;
+    background-color: #571e07;
   }
 
   footer > .alinhamento {
@@ -739,6 +1294,7 @@ footer {
   footer h3 {
     font-size: 2.1rem;
     margin-bottom: 1rem;
+    color: white;
   }
 
   footer ul li a {
@@ -758,6 +1314,7 @@ footer {
   .footer-logo {
     width: 40rem;
     text-align: justify ;
+    color: white;
   }
 
   .footer-menu ul, .footer-ajudar ul {

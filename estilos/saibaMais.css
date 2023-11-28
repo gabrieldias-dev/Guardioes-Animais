@@ -196,7 +196,7 @@ section {
     position: absolute;
     right: -10%;
     bottom: 20%;
-    transform: rotate(-110deg);
+    transform: rotate(-100deg);
     filter: invert(1);
   }
 
@@ -262,6 +262,7 @@ section {
   /* -------- Valores ---------------- */
 
   #valores {
+    position: relative;
     background-color: #004539;
   }
   .container-valores1 {
@@ -414,6 +415,40 @@ h3 {
     text-align: justify;
     padding-right: 1.5rem;
  }
+
+ /* ---------------- local ------------------- */
+ #local {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url(../assets/bg-sede.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+ }
+
+ .box-informacao {
+    background-color: rgba(0, 0, 0, 0.500);
+    backdrop-filter: blur(2px); 
+    border-radius: 1rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.715);
+    padding: 2rem 10rem;
+  }
+
+  .box-informacao p {
+    color: white;
+    padding-bottom: 2rem;
+    font-size: 2.5rem;
+    text-align: justify;
+    text-indent: 5rem;
+  }
+
+  .enderesso {
+    color: white;
+  }
+
+  address {
+    font-size: 2.2rem;
+  }
+
 
   /*=== FOOTER =================================*/
   footer {
