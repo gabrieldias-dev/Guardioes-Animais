@@ -319,9 +319,8 @@ footer {
 
   .sectionSobre {
     position: relative;
-    background-image: url(../assets/bg-macaco.jpg);
-    background-color: rgba(71, 24, 5, 0.99);
-    background-position: left right;
+    background-image: url(../assets/bgs2.jpg);
+    background-position: bottom right;
     z-index: 2;
   }
 
@@ -330,7 +329,7 @@ footer {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: rgba(71, 24, 5, 0.88);
+    background-color: rgba(71, 24, 5, 0.82);
     left: 0;
     top: 0;
   } 
@@ -503,7 +502,8 @@ footer {
  .numeros-resgates {
   position: relative;
   width: 100%;
-  background-image: url(../assets/bg-macaco.jpg);
+  background-image: url(../assets/bgs3.jpg);
+  background-size: cover;
   padding: 2rem 0;
 }
 
@@ -512,7 +512,7 @@ footer {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #000000d8;
+    background-color: rgba(71, 24, 5, 0.82);
     top: 0;
     left: 0;
 

@@ -15,12 +15,25 @@
             <a href="../index.html"> <img src="../assets/seta-voltar.png" alt="botão voltar para pagina principal"> Voltar</a>
         </button>
     </header>
-    <section id="inicio">
-        <div class="alinhamentoGeral">
+    <section id="inicio" class="blur">
+        <div class="alinhamentoGeral" id="blur">
             <div>
                 <h1>Não sabe quanto doar? Doe em forma de kit</h1>
             </div>
             <div class="container-kits">
+                <div class="pop-up" id="popupdoar">
+                    <div class="btn-fechar" onclick="fechar()">
+                        <button><img src="../assets/closeMenu.svg" alt="">
+                        </button>
+                    </div>
+                    <div>
+                        <p>Doe o valor selecionado para o
+                            CNPJ: 12.123.345/0001-74
+                            GUARDIÕES - Organização não governamental protetoras dos animais
+                        </p>
+                    </div>
+
+                </div>
                 <div class="box-kits">
                     <div class="img-cantoEsquerdo">
                         <img src="../assets/doacao/limpeza.png" alt="">
@@ -29,61 +42,72 @@
                         <h2>Kit Limpeza</h2>
                         <p>R$35</p>
                         <p>Desinfetante, água sanitaria, sabão e panos.</p>
-                        <button class="btn-doar"><a href="#">DOAR KIT</a></button>
+                        <button class="btn-doar" onclick="abrir()">DOAR KIT</button>
                     </div>
                 </div>
                 <div class="box-kits">
                     <div class="img-cantoEsquerdo">
-                        <img src="../assets/doacao/limpeza.png" alt="">
+                        <img src="../assets/doacao/racao.png" alt="">
                     </div>
                     <div>
                         <h2>Kit Alimentos</h2>
                         <p>R$40</p>
-                        <p>Kit que ajuda na compra de alimentos para todos nossos animais</p>
-                        <button class="btn-doar"><a href="#">DOAR KIT</a></button>
+                        <p>Esse Kit ajuda na compra de ração e alimentos para os animais</p>
+                        <button class="btn-doar" onclick="abrir()">DOAR KIT</button>
                     </div>
                 </div>
 
                 <div class="box-kits">
                     <div class="img-cantoEsquerdo">
-                        <img src="../assets/doacao/limpeza.png" alt="">
+                        <img src="../assets/doacao/remedio.png" alt="">
                     </div>
                     <div>
-                        <h2>Kit Medicamentos</h2>
-                        <p>Desinfetante, água sanitaria, sabão e panos.</p>
-                        <button class="btn-doar"><a href="#">DOAR KIT</a></button>
+                        <h2>Kit Remédios</h2>
+                        <p>R$50</p>
+                        <p>Kit ajuda na compra de remédios e medicamentos para os animais</p>
+                        <button class="btn-doar" onclick="abrir()">DOAR KIT</button>
                     </div>
                 </div>
                 <div class="box-kits">
                     <div class="img-cantoEsquerdo">
-                        <img src="../assets/doacao/limpeza.png" alt="">
+                        <img src="../assets/doacao/coleira.png" alt="">
                     </div>
                     <div>
                         <h2>Kit Acessórios</h2>
-                        <p>Desinfetante, água sanitaria, sabão e panos.</p>
-                        <button class="btn-doar"><a href="#">DOAR KIT</a></button>
+                        <p>R$25</p>
+                        <p>Compra de brinquedo, coleiras, roupinhas para os peludos</p>
+                        <button class="btn-doar" onclick="abrir()">DOAR KIT</button>
                     </div>
                 </div>
                 <div class="box-kits">
                     <div class="img-cantoEsquerdo">
-                        <img src="../assets/doacao/limpeza.png" alt="">
+                        <img src="../assets/doacao/vacinas.png" alt="">
                     </div>
                     <div>
                         <h2>Kit Vacina</h2>
-                        <p>Desinfetante, água sanitaria, sabão e panos.</p>
-                        <button class="btn-doar"><a href="#">DOAR KIT</a></button>
+                        <p>R$38</p>
+                        <p>Kit que auxiliam na compra de vacinas.</p>
+                        <button class="btn-doar" onclick="abrir()">DOAR KIT</button>
                     </div>
                 </div>
                 <div class="box-kits">
                     <div class="img-cantoEsquerdo">
-                        <img src="../assets/doacao/limpeza.png" alt="">
+                        <img src="../assets/doacao/mochila.png" alt="">
                     </div>
                     <div>
                         <h2>Kit Geral</h2>
-                        <p>Desinfetante, água sanitaria, sabão e panos.</p>
-                        <button class="btn-doar"><a href="#">DOAR KIT</a></button>
+                        <p>R$80</p>
+                        <p>Desse kit contém um pouco de cada dos outros kits</p>
+                        <button class="btn-doar" onclick="abrir()">DOAR KIT</button>
                     </div>
                 </div>
+            </div>
+            <div class="container-dados">
+                <h2>Doe qualquer valor que desejar!</h2>
+                <p>PIX: CNPJ: 12.123.345/0001-74
+                 GUARDIÕES - Organização não governamental protetoras dos animais</p>
+                 <p>Ao doar, nos envie o comprovante via WhatsApp ou E-mail com seu nome e CPF pois entrará em nossa lista de doadores e assim podendo participar de eventos, atualizações e sorteios realizados.</p>
+
             </div>
             
 
@@ -124,6 +148,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="../popup.js"></script>
 
 </body>
 </html>
