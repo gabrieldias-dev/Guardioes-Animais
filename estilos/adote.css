@@ -145,6 +145,7 @@ section {
     min-height: 100vh;
     background-image: url(../assets/bg-adote4.jpg);
     background-size: cover;
+    background-attachment: fixed;
     display: flex;
    
   }
@@ -274,6 +275,7 @@ section {
   min-height: 100vh;
   background-image: url(../assets/bg-adote.jpg);
   background-size: cover;
+  background-attachment: fixed;
 }
 
 #formAdocao > .alinhamentoGeral {
@@ -313,6 +315,12 @@ input {
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 4px;
+  border: none;
+  outline: none;
+}
+
+input:focus {
+  outline: 2px solid black;
 }
 
 #formAdocao > div {
