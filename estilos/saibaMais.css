@@ -381,14 +381,13 @@ h3 {
     
  }
 
- /*  -------- 6º section - ajuda da tecnologia - telas menores ------- */
+ /*  -------- 6º section - locais/sede - telas menores ------- */
 
   #local {
   width: 100vw;
   min-height: 100vh;
   background-image: url(../assets/bg-sede.jpg);
   background-size: cover;
-  background-attachment: fixed;
  }
 
  .box-informacao {

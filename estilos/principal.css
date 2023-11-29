@@ -309,12 +309,6 @@ body.menu-expanded button {
     padding: 5rem;
   }
 
-  .sectionResgates > .alinhamento {
-     width: min(70rem, 100%); /* quando a largura for menor que 50rem(500px) pega 100% */
-  }
-
- 
-
   .sectionResgates h2 {
     font-family: 'Stick No Bills', sans-serif;
     font-size: 3rem;
@@ -354,15 +348,14 @@ body.menu-expanded button {
   width: 100%;
   padding-top: 5rem;
   padding-bottom: 5rem;
-   box-shadow: none;
+  box-shadow: none;
    
-  
 }
 
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 25rem;
+  width: 100%;
   height: 40rem;
 
   background-color: #00453af8;

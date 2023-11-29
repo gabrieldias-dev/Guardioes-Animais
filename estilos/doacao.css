@@ -65,7 +65,301 @@ p {
 
 
 section {
-  padding: 5rem;
+  padding: 2rem;
+}
+
+@media (max-width: 1024px) {
+  /* botão voltar */
+
+.voltar-home {
+    position: fixed;
+    left: 1rem;
+    top: 2rem;
+
+    border: none;
+    border-radius: 3rem;
+    background-color: #16917db5;
+    width: 11rem;
+    height: 4rem;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.767);
+    cursor: pointer;
+
+    transition: transform .3s;
+    z-index: 10 ;
+  }
+
+  .voltar-home a {
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .voltar-home a img {
+    width: 2rem;
+    filter: invert(1);
+  }
+
+  /* ---------- inicio kits - telas menores -------------- */
+
+
+   #inicio {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/bgs3.jpg);
+    background-attachment: fixed;
+  } 
+
+  
+  h1 {
+    font-size: 3.5rem;
+    color: white;
+  }
+
+  body.blur::before  {
+    left: 0;
+    content: '';
+    position: absolute;
+    z-index: 10;
+    width: 100vw;
+    min-height: 300vh;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+
+  #inicio > .alinhamentoGeral {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+  }
+
+  .container-kits {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .pop-up {
+    position: absolute;
+    font-size: 1.4rem;
+    font-weight: 600;
+    width: 37rem;
+    height: 20rem;
+    border-radius: 2rem;
+    border: 2px solid black;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.764);
+    background-color: white;
+    z-index: 10;
+    top: 25%;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  button {
+    width: 8rem;
+    height: 5rem;
+    background-color: rgb(239, 63, 63);
+    border-radius: 3rem;
+    transition: all .3s;
+  }
+
+  button:hover {
+    transform: scale(1.1);
+  }
+
+  #popupdoar {
+    display: none;
+  }
+
+  .btn-fechar {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-bottom: 2rem;
+  }
+ 
+
+
+  .box-kits {
+    position: relative;
+    width: 90%;
+    border-radius: 2rem;
+    background-color: rgb(245, 245, 245);
+    margin-top: 10rem;
+    padding: 0 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box-kits h2 {
+    margin-top: 3rem;
+    font-size: 2.5rem;
+  }
+
+  .box-kits p {
+    font-size: 1.5rem;
+  }
+
+  .box-kits p:nth-child(2) {
+    font-size: 1.7rem;
+    font-weight: 600;
+  }
+
+   .btn-doar {
+    width: 80%;
+    height: 4rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    border: none;
+    margin: 1.5rem 0;
+    border-radius: .5rem;
+    background-color: var(--var-verde2);
+    font-weight: 700;
+    transition: all 0.3s;
+  }
+
+  .btn-doar:hover {
+    transform: scale(1.1);
+  }
+
+
+
+  .img-cantoEsquerdo {
+    width: 10rem;
+    height: 10rem; 
+    background-color: #23e0c1;
+    border-radius: 50%; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    left: -4rem;
+    top: -6rem;
+  }
+
+  .img-cantoEsquerdo img {
+    width: 7rem;
+  }
+
+ 
+  /* -------- dados bancos de doações -------------- */
+
+  .container-dados {
+    margin-top: 8rem;
+    padding: 2rem 2rem;
+
+  }
+  .container-dados h2 {
+    color: white;
+    font-size: 2.5rem;
+  }
+
+  .container-dados p {
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    font-weight: 600;
+  }
+
+  .container-dados :nth-child(3) {
+    font-size: 1.3rem;
+  }
+
+
+  /* ---------------- footer --------------------- */
+
+footer {
+  background-color: var(--var-CorPrimario);
+  padding: 2rem;
+  text-align: left;
+  color: white;
+}
+
+
+  footer > .alinhamento {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.5rem;
+    
+  }
+
+  footer h3 {
+    font-size: 2.3rem;
+    margin-bottom: 1.2rem;
+    text-align: left;
+  }
+
+  footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+  }
+
+  footer ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-logo img {
+    width: 20rem;
+    filter: invert(1);
+  }
+
+  .footer-logo {
+    width: 100%;
+    text-align: justify;
+    margin-bottom: 2rem;
+  }
+
+  .footer-menu {
+    margin-bottom: 2.5rem;
+  }
+
+  .footer-menu ul, .footer-ajudar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    
+  }
+
+  .footer-ajudar {
+    margin-bottom: 2.5rem;
+  }
+ 
+
+  .footer-icones ul {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .footer-icones ul li {
+    width: 3.8rem;
+  }
+
+  .footer-icones img {
+    width: 100%;
+    filter: invert(1);
+  }
+
 }
 
 /*=== RESPONSIVIDADE  DESKTOP=================================*/

@@ -65,7 +65,273 @@ h1, h2, h3, h4 {
 
 
 section {
-  padding: 3rem;
+  padding: 2rem;
+}
+
+@media (max-width: 1024px) {
+  /* botão voltar */
+
+.voltar-home {
+    position: fixed;
+    left: 1rem;
+    top: 2rem;
+
+    border: none;
+    border-radius: 3rem;
+    background-color: #16917db5;
+    width: 11rem;
+    height: 4rem;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.767);
+    cursor: pointer;
+
+    transition: transform .3s;
+    z-index: 10 ;
+  }
+
+  .voltar-home a {
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .voltar-home a img {
+    width: 2rem;
+    filter: invert(1);
+  }
+
+  /* ---------- inicio - telas menores -------------- */
+
+  
+
+  #home {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #01705e;
+    display: flex;  
+  }
+
+
+  #home > .alinhamentoGeral {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: start;
+  }
+
+  .conteudo-inicio {
+    position: relative;
+    margin-top: 10rem;
+    width: 100%;
+    color: white;
+    z-index: 10;
+  }
+
+  .conteudo-inicio h2 {
+    text-transform: uppercase;
+    font-size: 3.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .conteudo-inicio p {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  #home img {
+    position: absolute;
+  }
+
+  .dogAmarelo {
+    width: 18rem;
+    bottom: 0;
+    left: 0;
+  }
+
+  .cabecaGato {
+    width: 20rem;
+    transform: rotate(180deg);
+    top: 0;
+    right: 30%;
+  }
+
+  .dogCaramelo {
+    transform: rotateY(200deg);
+    right: -2rem;
+    bottom: 0;
+    width: 15rem;
+  }
+
+  /* --------- itens lojinha - telas menores ----------------- */
+
+  #itens-vendas {
+    position: relative;
+    background-color: rgb(235, 235, 235);
+  }
+
+  #itens-vendas h2 {
+    font-size: 4rem;
+    font-weight: 700;
+  }
+
+  #itens-vendas {
+    font-size: 1.5rem;
+  }
+
+  .containerProdutos {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+  }
+
+  .boxProdutos {
+    width: 80%;
+   
+    margin-top: 4rem;
+    background-color: rgba(0, 0, 0, 0.733);
+    border-radius: 1rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.664);
+    overflow: hidden; 
+  }
+
+  .box-img {
+    width: 100%;
+    height: 45%;
+    overflow: hidden;
+  }
+
+  .box-img img {
+    width: 100%;
+  }
+
+  .valor-info {
+    
+    padding: 0 1rem;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+    color: white;
+    padding: 0.5rem 0;
+    
+  }
+
+  .valor-info p {
+    margin: .7rem 0;
+    font-size: 1.5rem;
+  }
+
+  .preco-item {
+    display: block;
+    font-size: 1.7rem;
+    padding-top: .5rem;
+  }
+
+  .btn-comprar {
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: white;
+    border: none;
+    padding: 1.1rem 4.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    background-color: var(--var-verde2);
+    transition: all 0.3s;
+  }
+
+  .btn-comprar:hover {
+    transform: scale(1.1);
+  }
+
+   .img-patas img, .img-patas2 img {
+    display: none;
+  }
+
+
+
+  /* ---------------- footer --------------------- */
+
+footer {
+  background-color: var(--var-CorPrimario);
+  padding: 2rem;
+  text-align: left;
+  color: white;
+}
+
+
+  footer > .alinhamento {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.5rem;
+    
+  }
+
+  footer h3 {
+    font-size: 2.3rem;
+    margin-bottom: 1.2rem;
+    text-align: left;
+  }
+
+  footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+  }
+
+  footer ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-logo img {
+    width: 20rem;
+    filter: invert(1);
+  }
+
+  .footer-logo {
+    width: 100%;
+    text-align: justify;
+    margin-bottom: 2rem;
+  }
+
+  .footer-menu {
+    margin-bottom: 2.5rem;
+  }
+
+  .footer-menu ul, .footer-ajudar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    
+  }
+
+  .footer-ajudar {
+    margin-bottom: 2.5rem;
+  }
+ 
+
+  .footer-icones ul {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .footer-icones ul li {
+    width: 3.8rem;
+  }
+
+  .footer-icones img {
+    width: 100%;
+    filter: invert(1);
+  }
+
 }
 
 /*=== RESPONSIVIDADE  DESKTOP=================================*/
