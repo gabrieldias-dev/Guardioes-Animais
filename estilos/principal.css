@@ -109,7 +109,7 @@ body.menu-expanded {
 }
 
 .menu,
-.close-menu,
+.close-menu, 
 body.menu-expanded .open-menu {
   opacity: 0;
   visibility: hidden;
@@ -124,6 +124,12 @@ body.menu-expanded .close-menu {
 .menu {
   transform: translateX(100%);
 }
+.logomenucelular img {
+  filter: invert(1);
+  width: 25rem;
+
+}
+
 
 body.menu-expanded .menu {
   top: 0;
@@ -159,7 +165,7 @@ body.menu-expanded .menu {
 }
 
 .social-links img {
-  width: 5rem;
+  width: 3rem;
 }
 
 body.menu-expanded .logoScroll,
