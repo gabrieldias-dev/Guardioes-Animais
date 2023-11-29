@@ -46,7 +46,6 @@ body {
   width: min(50rem, 100%); /* quando a largura for menor que 50rem(500px) pega 100% */
   margin: auto;
   padding: .5rem;
-  border: 1px solid white;
 }
 
 ul {
@@ -59,7 +58,7 @@ img {
 }
 
 section {
-  padding: 5rem;
+  padding: 2rem;
 }
 
 
@@ -295,7 +294,7 @@ body.menu-expanded button {
 
   .box-Conteudo .btn-saiba > a {
     width: 100%;
-    padding: 1.5rem 4rem;
+    padding: 1.5rem 7.5rem;
     color: white;
     font-size: 1.5rem;
   }
@@ -307,6 +306,7 @@ body.menu-expanded button {
     background-image: url(../assets/bg7.jpg);
     background-size: cover;
     backdrop-filter: blur(4px);
+    padding: 5rem;
   }
 
   .sectionResgates > .alinhamento {
@@ -429,7 +429,6 @@ body.menu-expanded button {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  border: 1px solid white;
 
 }
 
@@ -628,7 +627,7 @@ body.menu-expanded button {
 
 
 
-/* footer - telas menores */
+/* ------------ footer - telas menores ------------------*/
 
 footer {
   background-color: var(--var-CorPrimario);

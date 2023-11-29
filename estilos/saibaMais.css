@@ -54,13 +54,443 @@ h1, h2, h3 {
 .alinhamentoGeral {
   width: min( 50rem, 100%); /* quando a largura for menor que 50rem(500px) pega 100% */
   margin: auto;
-  padding: 2.4rem;
+  padding: 1rem;
   
 }
 
 
 section {
-  padding: 5rem;
+  padding: 2rem;
+}
+
+@media (max-width: 1024px) {
+
+  /* Botão voltar menu */
+
+  .voltar-home {
+    position: fixed;
+    left: 1rem;
+    top: 2rem;
+
+    border: none;
+    border-radius: 3rem;
+    background-color: #16917db5;
+    width: 11rem;
+    height: 4rem;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.767);
+    cursor: pointer;
+
+    transition: transform .3s;
+    z-index: 10 ;
+  }
+
+  .voltar-home a {
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .voltar-home a img {
+    width: 2rem;
+    filter: invert(1);
+  }
+
+  .voltar-home:hover {
+    background-color: #16917dee;
+    transform: scale(1.1);
+  }
+
+
+  /*  -------- 1º section - telas menores ------- */
+
+  #home {
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url(../assets/aguia.jpg);
+    background-size: cover;
+    display: flex;
+  }
+
+  .box-esquerdo {
+    padding: 1.5rem 1rem;
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.400);
+    backdrop-filter: blur(5px); 
+    border-radius: 1rem;
+    
+    
+  }
+
+  h1 {
+    font-size: 3rem;
+    text-align: left;
+  }
+
+  .box-esquerdo p {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  /*  -------- 2º section - nossa historia - telas menores ------- */
+
+  #nossaHistoria {
+    position: relative;
+    background-color: var(--var-verde1);
+    overflow: hidden;
+  }
+
+  .img-patas {
+    position: absolute;
+    bottom: 25%;
+    left: -15rem;
+    transform: rotate(-70deg);
+  }
+
+  .img-patas img, .img-patas2 img {
+    width: 60rem;
+    display: none;
+    
+  }
+
+  .img-patas2 {
+    position: absolute;
+    right: -10%;
+    bottom: 20%;
+    transform: rotate(-100deg);
+    filter: invert(1);
+  }
+
+  
+
+  #nossaHistoria > .alinhamentoGeral {
+    display: flex;
+    justify-content: center;
+  }
+
+  .box {
+    width: 100%;
+    padding: 1.5rem;
+    color: white;
+    z-index: 2;
+  }
+
+
+  h2 {
+    color: white;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  .box-historia p {
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+    text-align: justify;
+    
+  }
+
+
+  /*  -------- 3º section - missão - telas menores ------- */
+  #missao {
+    width: 100vw;
+    
+    background-image: url(../assets/bg-missao.jpg);
+    background-position: top top;
+  }
+
+  #missao > .alinhamentoGeral {
+    display: flex;
+    justify-content: center;
+  }
+
+  .box-missao {
+    background-color: rgba(0, 0, 0, 0.400);
+    backdrop-filter: blur(2px); 
+    border-radius: 1rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.715);
+  }
+
+  .box-missao p {
+    padding-bottom: 2rem;
+    font-size: 1.5rem;
+    text-align: justify;
+    text-indent: 4rem;
+  }
+
+  /*  -------- 4º section - valores - telas menores ------- */
+
+  #valores {
+    position: relative;
+    background-color: #004539;
+  }
+  .container-valores1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    width: 100%;
+    margin-top: 5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .container-valores2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .icone-pilares {
+    width: 10rem;
+    filter: invert(1);
+    margin: 1.5rem 0;
+    
+  }
+
+  .seta-direta {
+    filter: invert(1);
+  }
+
+  .flip-card {
+  background-color: transparent;
+  width: 25rem;
+  height: 30rem;
+  perspective: 1000px;
+}
+
+h3 {
+  font-size: 1.8em;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: .5rem;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+}
+
+.flip-card-front {
+  background-color: rgba(0, 0, 0, 0.792);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+}
+
+.flip-card-back {
+  background-color: var(--var-verde2);
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-card-back p {
+    font-size: 2.3rem;
+    text-align: center;
+}
+
+/*  -------- 5º section - ajuda da tecnologia - telas menores ------- */
+#tecnologia {
+    position: relative;
+    min-height: 100vh;
+    background-color: black;
+    background-image: url(../assets/bg11.jpg);
+    background-size: cover; 
+    z-index: 0;
+ }
+
+
+ .container-tecnologia {
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.219);
+    border-radius: 1rem;
+    padding: 5rem 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.695);
+ }
+
+ .container-tecnologia p {
+    font-size: 2rem;
+ }
+
+ .exemplos-tecnologia {
+    margin-top: 10rem;
+    width: 100%;
+ }
+
+ .lado-esquerdo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 7rem;
+ }
+
+ .lado-esquerdo img {
+    width: 100%;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+ }
+
+ .lado-esquerdo p, .lado-direito p {
+    text-align: justify;
+ }
+
+  .lado-direito {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+
+ }
+
+ .lado-direito img {
+    width: 100%;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    
+ }
+
+ /*  -------- 6º section - ajuda da tecnologia - telas menores ------- */
+
+  #local {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url(../assets/bg-sede.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+ }
+
+ .box-informacao {
+    background-color: rgba(0, 0, 0, 0.500);
+    backdrop-filter: blur(2px); 
+    border-radius: 1rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.715);
+    padding: 2rem 1rem;
+  }
+
+  .box-informacao p {
+    color: white;
+    padding-bottom: 2rem;
+    font-size: 1.8rem;
+    text-align: justify;
+    text-indent: 5rem;
+  }
+
+  .enderesso {
+    color: white;
+  }
+
+  address {
+    font-size: 1.8rem;
+  }
+
+
+  /* footer  */
+  
+footer {
+  background-color: var(--var-CorPrimario);
+  padding: 2rem;
+  text-align: left;
+  color: white;
+}
+
+
+  footer > .alinhamento {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.5rem;
+    
+  }
+
+  footer h3 {
+    font-size: 2.3rem;
+    margin-bottom: 1.2rem;
+    text-align: left;
+  }
+
+  footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+  }
+
+  footer ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-logo img {
+    width: 20rem;
+    filter: invert(1);
+  }
+
+  .footer-logo {
+    width: 100%;
+    text-align: justify;
+    margin-bottom: 2rem;
+  }
+
+  .footer-menu {
+    margin-bottom: 2.5rem;
+  }
+
+  .footer-menu ul, .footer-ajudar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    
+  }
+
+  .footer-ajudar {
+    margin-bottom: 2.5rem;
+  }
+ 
+
+  .footer-icones ul {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .footer-icones ul li {
+    width: 3.8rem;
+  }
+
+  .footer-icones img {
+    width: 100%;
+    filter: invert(1);
+  }
+
+
 }
 
 /*=== RESPONSIVIDADE  DESKTOP=================================*/
