@@ -176,6 +176,7 @@ body.menu-expanded button {
 
 
 @media (max-width: 1024px) {
+
   /*-------------- #HOME telas menos ------------------------ */
 #home {
   padding-top: calc(4.1rem + var(--nav-height));
@@ -399,8 +400,33 @@ body.menu-expanded button {
 
 .resgate-conteudo p {
   font-size: 1.2rem;
-    padding-top: 1rem;
+  padding-top: 1rem;
+  text-align: justify;
 }
+
+.orientacao-carrosel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  width: 100%;
+  height: 4rem;
+
+}
+
+.orientacao-carrosel img {
+  width: 2rem;
+  filter: invert(1);
+}
+
+
+
+
 
 
 /* ------------ card informações - telas menores  ----------------- */
@@ -1050,6 +1076,27 @@ footer {
 
 .resgate-conteudo p {
     padding-top: 1rem;
+    text-align: justify;
+}
+
+.orientacao-carrosel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  width: 100%;
+  height: 4rem;
+
+}
+
+.orientacao-carrosel img {
+  width: 3rem;
+  filter: invert(1);
 }
 
 
