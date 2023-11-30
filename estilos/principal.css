@@ -124,11 +124,6 @@ body.menu-expanded .close-menu {
 .menu {
   transform: translateX(100%);
 }
-.logomenucelular img {
-  filter: invert(1);
-  width: 25rem;
-
-}
 
 
 body.menu-expanded .menu {
@@ -176,6 +171,13 @@ body.menu-expanded button {
 
 
 @media (max-width: 1024px) {
+
+  .logomenucelular img {
+  filter: invert(1);
+  width: 25rem;
+
+}
+
 
   /*-------------- #HOME telas menos ------------------------ */
 #home {
@@ -846,6 +848,10 @@ footer {
   }
 
   /* ------------- Seção HOME -------------------*/
+
+  #navigation .alinhamento .menu .logomenucelular img{
+    display: none;
+  }
 
   #home {
     padding-top: var(--nav-height);
