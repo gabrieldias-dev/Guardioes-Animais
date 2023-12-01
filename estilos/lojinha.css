@@ -213,7 +213,6 @@ section {
   }
 
   .valor-info {
-    
     padding: 0 1rem;
   }
 
@@ -237,10 +236,11 @@ section {
 
   .btn-comprar {
     cursor: pointer;
+    width: 80%;
+    height: 3rem;
     font-size: 1.4rem;
     color: white;
     border: none;
-    padding: 1.1rem 4.5rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
     border-radius: 1rem;
@@ -250,6 +250,11 @@ section {
 
   .btn-comprar:hover {
     transform: scale(1.1);
+  }
+
+  .btn-comprar a {
+    color: white;
+    padding: 1rem 4.7rem;
   }
 
    .img-patas img, .img-patas2 img {
@@ -535,11 +540,12 @@ footer {
   }
 
   .btn-comprar {
+    width: 25rem;
+    height: 4rem;
     cursor: pointer;
     font-size: 1.6rem;
     color: white;
     border: none;
-    padding: 1.3rem 9rem;
     margin-top: 1rem;
     border-radius: .5rem;
     background-color: var(--var-verde2);
@@ -549,6 +555,12 @@ footer {
   .btn-comprar:hover {
     transform: scale(1.1);
   }
+
+  .btn-comprar a {
+    color: white;
+    padding: 1rem 8rem;
+  }
+
 
    .img-patas img, .img-patas2 img {
     width: 60rem;
