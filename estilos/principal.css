@@ -196,8 +196,6 @@ body.menu-expanded button {
     background-image: url(../assets/bg1.jpg);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-
     display: flex;
   }
 
