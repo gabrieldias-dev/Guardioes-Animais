@@ -92,6 +92,7 @@ nav button {
 nav .menu,
 nav .close-menu {
   position: fixed;
+  z-index: 2; 
 }
 
 /*=== MENU-Expandido - Telas menores =================================*/
@@ -195,6 +196,7 @@ body.menu-expanded button {
     background-image: url(../assets/bg1.jpg);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 
     display: flex;
   }
@@ -564,8 +566,9 @@ body.menu-expanded button {
   .sectionAjudar h2 {
    font-family: 'Stick No Bills', sans-serif;
     color: white;
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: 700;
+    padding-top: 2rem;
   }
 
   .sectionAjudar > .alinhamento {
@@ -573,14 +576,16 @@ body.menu-expanded button {
     backdrop-filter: blur(3px);
     border-radius: 1rem;
     margin-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     }
 
   .container-ajuda {
-    width: 100%;
+    width: 90%;
     padding: 2rem 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 2rem;
     margin-top: 2rem;
   }
@@ -1242,6 +1247,7 @@ footer {
     color: white;
     font-size: 5rem;
     font-weight: 700;
+    padding-top: 3rem;
   }
 
   .sectionAjudar > .alinhamento {

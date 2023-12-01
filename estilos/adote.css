@@ -223,8 +223,9 @@ section {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url(../assets/bg-adote.jpg);
+  background-image: url(../assets/bgform.jpg);
   background-size: cover;
+  background-attachment: fixed;
 }
 
 #formAdocao > .alinhamentoGeral {
@@ -580,12 +581,11 @@ footer {
   /*  --------- form adocao ------------- */
 
   #formAdocao {
-  background-color: #f4f4f4;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url(../assets/bg-adote.jpg);
+  background-image: url(../assets/bgform.jpg);
   background-size: cover;
   background-attachment: fixed;
 }
