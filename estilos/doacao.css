@@ -601,6 +601,7 @@ footer {
   /* -------- dados bancos de doações -------------- */
 
   .container-dados {
+    width: 90rem;
     margin-top: 8rem;
     padding: 2rem 10rem;
 
@@ -613,18 +614,16 @@ footer {
   .container-dados p {
     color: white;
     font-size: 3rem;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     font-weight: 600;
   }
 
   .container-dados :nth-child(3) {
+
     font-size: 2.3rem;
   }
 
   
-
-
-
   /*=== FOOTER =================================*/
   footer {
     padding: 2rem 0;
