@@ -62,7 +62,8 @@ section {
 }
 
 
-/*=== Navegação =================================*/
+/*----------------------- Navegação ---------------------- */
+
 nav {
   display: flex;
   height: var(--nav-height);
@@ -95,7 +96,7 @@ nav .close-menu {
   z-index: 2; 
 }
 
-/*=== MENU-Expandido - Telas menores =================================*/
+/* ----------------- MENU-Expandido - Telas menores ---------------- */
 
  .open-menu, .close-menu {
     filter: invert(1);
@@ -170,9 +171,7 @@ body.menu-expanded button {
   z-index: 10;
 }
 
-
 @media (max-width: 1024px) {
-
   .logomenucelular img {
   filter: invert(1);
   width: 25rem;
@@ -181,6 +180,7 @@ body.menu-expanded button {
 
 
   /*-------------- #HOME telas menos ------------------------ */
+
 #home {
   padding-top: calc(4.1rem + var(--nav-height));
 }
@@ -231,12 +231,6 @@ body.menu-expanded button {
     font-weight: 600;
     text-transform: uppercase;
   }
-
-
-
-
-
-
 
   /*  ------------- Sobre - telas menores --------------- */
 
@@ -351,17 +345,16 @@ body.menu-expanded button {
   overflow: hidden;
   /* border: 1px solid white; */
   box-shadow: none;
-}
+ }
 
-.swiper {
+ .swiper {
   width: 100%;
   padding-top: 5rem;
   padding-bottom: 5rem;
-  box-shadow: none;
-   
-}
+  box-shadow: none; 
+ }
 
-.swiper-slide {
+ .swiper-slide {
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -370,43 +363,40 @@ body.menu-expanded button {
   background-color: #00453af8;
   filter: blur(3px);
   border-radius: 1rem;
-   
-}
+ }
 
-.swiper-3d .swiper-slide-shadow-left,
-.swiper-3d .swiper-slide-shadow-right {
-  background-image: none;
-}
+ .swiper-3d .swiper-slide-shadow-left,
+ .swiper-3d .swiper-slide-shadow-right {
+ background-image: none;
+ }
 
-.swiper-slide-active {
+ .swiper-slide-active {
   filter: blur(0);
-}
+ }
 
-.boxcard {
+ .boxcard {
   position: relative;
   width: 100%;
   padding: 2rem;
   padding-top: 2rem;
   color: #ffffff;
-}
+ }
 
  .boxcard img {
   width: 100%;
+ }
 
-}
-
-.resgate-conteudo {
+ .resgate-conteudo {
   padding-top: 1.5rem;
-  
-}
+ }
 
-.resgate-conteudo p {
+ .resgate-conteudo p {
   font-size: 1.2rem;
   padding-top: 1rem;
   text-align: justify;
-}
+ }
 
-.orientacao-carrosel {
+ .orientacao-carrosel {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -418,27 +408,25 @@ body.menu-expanded button {
 
   width: 100%;
   height: 4rem;
+ }
 
-}
-
-.orientacao-carrosel img {
+ .orientacao-carrosel img {
   width: 2rem;
   filter: invert(1);
-}
-
-
+ }
 
 
 
 
 /* ------------ card informações - telas menores  ----------------- */
-.numeros-resgates {
+
+ .numeros-resgates {
   position: relative;
   width: 100%;
   background-image: url(../assets/bgs3.jpg);
   background-size: cover;
   padding: 2rem 0;
-}
+ }
 
  .numeros-resgates::before {
     position: absolute;
@@ -451,16 +439,16 @@ body.menu-expanded button {
 
   }
 
-.numeros-resgates > .alinhamento {
+ .numeros-resgates > .alinhamento {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
 
-}
+ }
 
 
-.box-numeros {
+ .box-numeros {
   width: 100%;
   height: 15rem;
   border-radius: 1rem;
@@ -469,37 +457,37 @@ body.menu-expanded button {
   align-items: center;
   justify-content: center;
   perspective: 1000px;
-}
+ }
 
-.box-numeros p {
+ .box-numeros p {
   color: white;
   text-transform: uppercase;
   font-weight: 600;
 
-}
+ }
 
 
-.card-inner {
+ .card-inner {
   width: 100%;
   height: 100%;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 1s;
-}
+ }
 
-.box-numeros:hover .card-inner {
+ .box-numeros:hover .card-inner {
   transform: rotateY(180deg);
-}
+ }
 
-.card-front,
-.card-back {
+ .card-front,
+ .card-back {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-}
+ }
 
-.card-front {
+ .card-front {
   background-color: var(--var-CorMedia);
   display: flex;
   align-items: center;
@@ -509,53 +497,51 @@ body.menu-expanded button {
   transform: rotateY(0deg);
 
   box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.359);
-}
+ }
 
-.card-front p {
+ .card-front p {
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0.499);
   border-radius: .5rem;
   backdrop-filter: blur(4px);
   font-size: 1.7rem;
-}
+ }
 
-.card1 {
+ .card1 {
   background-image: url(../assets/bg3.jpg);
   background-size: cover;
-}
+ }
 
-.card2 {
+ .card2 {
   background-image: url(../assets/arara-gaiola.jpg);
   background-size: cover;
-}
+ }
 
-.card3 {
+ .card3 {
   background-image: url(../assets/fami-feliz.jpg);
   background-size: cover;
-}
+ }
 
 
-.card-back {
+ .card-back {
   background-color: var(--var-CorMedia);
   display: flex;
   align-items: center;
   border-radius: 1rem;
   justify-content: center;
   transform: rotateY(180deg);
-  
-
   box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.359);
-}
+ }
 
-.card-back p {
+ .card-back p {
   font-size: 1.2rem;
   padding: 0 1rem;
-}
+ }
 
 
 /* ----------- como ajudar - telas menores -------------- */
 
-.sectionAjudar {
+ .sectionAjudar {
     background-color: var(--var-verde1);
     background-image: url(../assets/bg9.jpg);
     background-attachment: fixed;
@@ -659,12 +645,12 @@ body.menu-expanded button {
 
 /* ------------ footer - telas menores ------------------*/
 
-footer {
+ footer {
   background-color: var(--var-CorPrimario);
   padding: 2rem;
   text-align: left;
   color: white;
-}
+ }
 
 
   footer > .alinhamento {
@@ -735,7 +721,6 @@ footer {
     filter: invert(1);
   }
 
-
 }
 
 
@@ -744,21 +729,6 @@ footer {
 
 /* quando o dispositivo tiver minimo 1024px pra cima  */
 @media (min-width: 1024px) {
-  /* ::-webkit-scrollbar {
-    width: 1.3rem;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: var(--bg-light);
-    border: 0.5px solid #cfd8dc;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
-    border: 3px solid #cfd8dc;
-    border-radius: 10px;
-  } */
- 
   body {
     overflow: auto;
   }
@@ -771,7 +741,7 @@ footer {
     padding: 6rem;
   }
 
-  /*=== Navegação =================================*/
+  /*-------------- Navegação -------------*/
 
   nav#navigation .alinhamento * {
     margin: 0;
@@ -800,15 +770,11 @@ footer {
     filter: invert(1);
   }
 
-  
-
   nav#navigation .close-menu,
   nav#navigation .open-menu,
   nav#navigation .social-links {
     display: none;
   }
-
- 
 
   nav#navigation .menu {
     display: flex;
@@ -823,7 +789,8 @@ footer {
     gap: 3.2rem;
   }
 
-  /* Criando a linha de animação nos links da navbar*/
+  /* -- Criando a linha de animação nos links da navbar -- */
+
   nav#navigation .menu li a::after {
     content: "";
     width: 0;
@@ -885,8 +852,6 @@ footer {
     backdrop-filter: blur(2px);
     border-radius: 1rem;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.74);
-    
-    
   }
 
 
@@ -939,7 +904,6 @@ footer {
   
   .box-Imagem img{
     border-radius: 1rem;
-    
   }
 
   .box-Conteudo {
@@ -984,7 +948,6 @@ footer {
     transform: scale(1.06);
     box-shadow: 7px 7px 8px rgba(0, 0, 0, 0.61);
     background-color: var(--var-btnhover);
-
   }
 
  
@@ -997,8 +960,6 @@ footer {
     background-attachment: fixed;
     
   }
-
- 
 
   .sectionResgates h2 {
     font-family: 'Stick No Bills', sans-serif;
@@ -1033,16 +994,14 @@ footer {
   overflow: hidden;
   /* border: 1px solid white; */
   box-shadow: none;
-}
+ }
 
 .swiper {
   width: 100%;
   padding-top: 5rem;
   padding-bottom: 5rem;
-   box-shadow: none;
-   
-  
-}
+  box-shadow: none;
+ }
 
 .swiper-slide {
   background-position: center;
@@ -1075,12 +1034,10 @@ footer {
 
  .boxcard img {
   width: 100%;
-
 }
 
 .resgate-conteudo {
   padding-top: 1.5rem;
-  
 }
 
 .resgate-conteudo p {
@@ -1109,7 +1066,7 @@ footer {
 }
 
 
-/* --------------------- números resgates ---------------- */
+/* ------------------- números resgates -------------- */
 
  .numeros-resgates {
   position: relative;
@@ -1127,15 +1084,13 @@ footer {
     background-color: rgba(71, 24, 5, 0.82);
     top: 0;
     left: 0;
-
   }
 
 .numeros-resgates > .alinhamento {
   display: flex;
   justify-content: space-evenly;
   padding: 2rem 2rem;
-
-}
+ }
 
 
 .box-numeros {
@@ -1154,7 +1109,6 @@ footer {
   color: white;
   text-transform: uppercase;
   font-weight: 600;
-
 }
 
 
@@ -1304,8 +1258,6 @@ footer {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.61);
     transition: 0.5s;
     cursor: pointer;
-
-   
   }
 
   .btn-ajuda a {
@@ -1320,14 +1272,11 @@ footer {
     transform: scale(1.06);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.61);
     background-color: var(--var-btnhover);
-
   }
 
- 
   #ajudar .doacao {
     background-size: cover;
   }
-
 
   #ajudar .lojinha {
     background-size: cover;
@@ -1340,6 +1289,7 @@ footer {
 
 
   /*--------------- FOOTER ----------------------*/
+
   footer {
     padding: 2rem 6rem;
     background-color: #571e07;
@@ -1383,7 +1333,6 @@ footer {
     
   }
  
-
   .footer-icones ul {
     display: flex;
     gap: 3rem;
